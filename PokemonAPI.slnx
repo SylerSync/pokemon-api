@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="controllers/controllers.csproj" />
+  <Project Path="Core/Core.csproj" Id="e9f1a241-2428-4601-874f-64ae8f16e7e1" />
+</Solution>
