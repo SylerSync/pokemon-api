@@ -41,17 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Pokemon\PokemonDto.cs" />
+    <Compile Include="Domain\Constants\PokemonConstants.cs" />
+    <Compile Include="Domain\DataObjects\Pokemon.cs" />
+    <Compile Include="Domain\Enums\ItemEnum.cs" />
+    <Compile Include="Domain\Repositories.Abstactions\IRepositoryManager.cs" />
+    <Compile Include="Infrastructure\Repositories\RepositoryManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services.Abstractions\IServiceManager.cs" />
+    <Compile Include="Services\ServiceManager.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contracts\" />
-    <Folder Include="Domain\Constants\" />
-    <Folder Include="Domain\DataObjects\" />
-    <Folder Include="Domain\Enums\" />
-    <Folder Include="Domain\Repositories.Abstactions\" />
-    <Folder Include="Infrastructure\Repositories\" />
-    <Folder Include="Services.Abstractions\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
