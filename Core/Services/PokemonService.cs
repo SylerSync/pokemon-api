@@ -1,4 +1,5 @@
 ﻿using Core.Contracts.Pokemon;
+using Core.Domain.Repositories.Abstactions;
 using Core.Services.Abstractions;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,13 @@ namespace Core.Services
 {
     internal sealed class PokemonService : IPokemonService
     {
+        private readonly IPokemonRepository _pokemonRepository;
+
+        public PokemonService(IPokemonRepository pokemonRepository)
+        {
+            _pokemonRepository = pokemonRepository;
+        }
+
         public Task AddPokemonAsync(PokemonDto pokemon, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();

@@ -12,11 +12,14 @@ namespace Core.Services
     public sealed class ServiceManager : IServiceManager
     {
         private readonly Lazy<IItemService> _lazyItemService;
+        private readonly Lazy<IPokemonService> _lazyPokemonService;
         public ServiceManager(IRepositoryManager repositoryManager) 
         {
             _lazyItemService = new Lazy<IItemService>(() => new ItemService(repositoryManager.ItemRepository));
+            _lazyPokemonService = new Lazy<IPokemonService>(() => new PokemonService(repositoryManager.PokemonRepository));
         }
 
         public IItemService ItemService => _lazyItemService.Value;
+        public IPokemonService IPokemonService => _lazyPokemonService.Value;
     }
 }
