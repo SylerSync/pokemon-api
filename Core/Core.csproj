@@ -41,10 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Item\ItemDto.cs" />
     <Compile Include="Contracts\Pokemon\PokemonDto.cs" />
     <Compile Include="Domain\Constants\PokemonConstants.cs" />
+    <Compile Include="Domain\DataObjects\EvolutionItem.cs" />
+    <Compile Include="Domain\DataObjects\Item.cs" />
+    <Compile Include="Domain\DataObjects\ItemEffect.cs" />
+    <Compile Include="Domain\DataObjects\MegaEvolutionItem.cs" />
+    <Compile Include="Domain\DataObjects\PokeballItem.cs" />
     <Compile Include="Domain\DataObjects\Pokemon.cs" />
+    <Compile Include="Domain\DataObjects\RecoveryItem.cs" />
+    <Compile Include="Domain\DataObjects\TechnicalMachineItem.cs" />
     <Compile Include="Domain\Enums\ItemEnum.cs" />
+    <Compile Include="Domain\Repositories.Abstactions\IItemRepository.cs" />
     <Compile Include="Domain\Repositories.Abstactions\IRepositoryManager.cs" />
     <Compile Include="Infrastructure\Repositories\RepositoryManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
