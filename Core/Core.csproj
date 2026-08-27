@@ -172,7 +172,6 @@
     <Compile Include="Domain\Repositories.Abstactions\IItemRepository.cs" />
     <Compile Include="Domain\Repositories.Abstactions\IRepositoryManager.cs" />
     <Compile Include="Infrastructure\Repositories\ItemRepository.cs" />
-    <Compile Include="Infrastructure\MongoContext.cs" />
     <Compile Include="Infrastructure\Repositories\PokemonRepository.cs" />
     <Compile Include="Infrastructure\Repositories\RepositoryManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
