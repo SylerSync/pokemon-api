@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Domain.Repositories.Abstactions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace Core.Infrastructure.Repositories
 {
-    internal class RepositoryManager
+    public sealed class RepositoryManager : IRepositoryManager
     {
+        private readonly Lazy<IPokemonRepository> _lazyPokemonRepo;
+        public IPokemonRepository PokemonRepository => _lazyPokemonRepo.Value;
     }
 }

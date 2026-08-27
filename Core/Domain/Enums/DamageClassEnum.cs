@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Services.Abstractions
+namespace Core.Domain.Enums
 {
-    public class IServiceManager
+    public enum DamageClassEnum
     {
-        IPokemonService IPokemonService { get; }
+        status,
+        physical,
+        special
     }
 }

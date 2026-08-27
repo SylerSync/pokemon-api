@@ -36,6 +36,11 @@ ScaffoldingReadMe.txt
 # NuGet Symbol Packages
 *.snupkg
 
+# NuGet Packages
+*.nupkg
+**/packages/*
+[Pp]ackages/
+
 # dotenv environment variables file
 .env
 
@@ -60,3 +65,6 @@ nunit-*.xml
 *.v2
 *bin
 /.vs/PokemonAPI.slnx/v18/
+/Core/.vs/Core.csproj.dtbcache.json
+/Core/.vs/Core.csproj.dtbcache.json
+.vs

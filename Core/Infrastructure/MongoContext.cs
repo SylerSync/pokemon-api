@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Domain.Enums
+namespace Core.Infrastructure
 {
-    internal class ItemEnum
+    public partial class MongoContext
     {
     }
 }
