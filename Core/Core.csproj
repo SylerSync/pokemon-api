@@ -149,11 +149,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Item\ItemDto.cs" />
     <Compile Include="Contracts\Pokemon\PokemonDto.cs" />
     <Compile Include="Domain\Constants\PokemonConstants.cs" />
+    <Compile Include="Domain\DataObjects\EvolutionItem.cs" />
+    <Compile Include="Domain\DataObjects\BaseItem.cs" />
+    <Compile Include="Domain\DataObjects\ItemEffect.cs" />
+    <Compile Include="Domain\DataObjects\MegaEvolutionItem.cs" />
+    <Compile Include="Domain\DataObjects\PokeballItem.cs" />
     <Compile Include="Domain\DataObjects\EvolutionReqs.cs" />
     <Compile Include="Domain\DataObjects\Move.cs" />
     <Compile Include="Domain\DataObjects\Pokemon.cs" />
+    <Compile Include="Domain\DataObjects\RecoveryItem.cs" />
+    <Compile Include="Domain\DataObjects\TechnicalMachineItem.cs" />
     <Compile Include="Domain\DataObjects\Sprites.cs" />
     <Compile Include="Domain\DataObjects\Stat.cs" />
     <Compile Include="Domain\Enums\DamageClassEnum.cs" />
@@ -161,13 +169,17 @@
     <Compile Include="Domain\Enums\StatEnum.cs" />
     <Compile Include="Domain\Enums\TypeEnum.cs" />
     <Compile Include="Domain\Repositories.Abstactions\IPokemonRepository.cs" />
+    <Compile Include="Domain\Repositories.Abstactions\IItemRepository.cs" />
     <Compile Include="Domain\Repositories.Abstactions\IRepositoryManager.cs" />
+    <Compile Include="Infrastructure\Repositories\ItemRepository.cs" />
     <Compile Include="Infrastructure\MongoContext.cs" />
     <Compile Include="Infrastructure\Repositories\PokemonRepository.cs" />
     <Compile Include="Infrastructure\Repositories\RepositoryManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services.Abstractions\IItemService.cs" />
     <Compile Include="Services.Abstractions\IPokemonService.cs" />
     <Compile Include="Services.Abstractions\IServiceManager.cs" />
+    <Compile Include="Services\ItemService.cs" />
     <Compile Include="Services\PokemonService.cs" />
     <Compile Include="Services\ServiceManager.cs" />
   </ItemGroup>

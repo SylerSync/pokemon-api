@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Core.Services.Abstractions
 {
-    public class IServiceManager
+    public interface IServiceManager
     {
+        IItemService ItemService { get; }
         IPokemonService IPokemonService { get; }
     }
 }
