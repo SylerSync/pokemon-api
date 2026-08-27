@@ -1,13 +1,17 @@
+using Core.Domain.Repositories.Abstactions;
+using Core.Infrastructure.Repositories;
 using Core.Services;
 using Core.Services.Abstractions;
-using Core.Infrastructure.Repositories;
-using Core.Domain.Repositories.Abstactions;
+using MongoDB.Driver;
+using System.Diagnostics;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
