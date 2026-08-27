@@ -9,5 +9,6 @@ namespace Core.Domain.Repositories.Abstactions
     public interface IRepositoryManager
     {
         IItemRepository ItemRepository { get; }
+        IPokemonRepository PokemonRepository { get; }
     }
 }

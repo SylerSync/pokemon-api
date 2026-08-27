@@ -22,6 +22,7 @@ builder.Services.AddScoped<IMongoDatabase>(sp =>
     return client.GetDatabase(databaseName);
 });
 
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<IServiceManager, ServiceManager>();

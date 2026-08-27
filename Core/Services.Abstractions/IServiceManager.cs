@@ -9,5 +9,6 @@ namespace Core.Services.Abstractions
     public interface IServiceManager
     {
         IItemService ItemService { get; }
+        IPokemonService IPokemonService { get; }
     }
 }
