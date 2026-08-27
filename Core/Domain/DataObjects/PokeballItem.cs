@@ -1,6 +1,6 @@
 ﻿namespace Core.Domain.DataObjects
 {
-    public class PokeballItem : Item
+    public class PokeballItem : BaseItem
     {
         public int CatchPower { get; private set; }
         public string Description { get; private set; }

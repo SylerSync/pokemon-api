@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Core.Domain.Repositories.Abstactions
 {
-    internal class IRepositoryManager
+    public interface IRepositoryManager
     {
+        IItemRepository ItemRepository { get; }
     }
 }

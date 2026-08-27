@@ -1,6 +1,6 @@
 ﻿namespace Core.Domain.DataObjects
 {
-    public class RecoveryItem : Item
+    public class RecoveryItem : BaseItem
     {
         public ItemEffect Effect { get; private set; }
 

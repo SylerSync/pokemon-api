@@ -1,6 +1,6 @@
 ﻿namespace Core.Domain.DataObjects
 {
-    public class MegaEvolutionItem : Item
+    public class MegaEvolutionItem : BaseItem
     {
 
         public string PokemonName { get; private set; }

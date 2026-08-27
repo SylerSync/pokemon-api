@@ -1,6 +1,6 @@
 ﻿namespace Core.Domain.DataObjects
 {
-    public class EvolutionItem : Item
+    public class EvolutionItem : BaseItem
     {
         public string Description { get; private set; }
 
