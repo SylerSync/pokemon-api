@@ -1,6 +1,6 @@
 ﻿namespace Core.Domain.DataObjects
 {
-    public class TechnicalMachineItem : Item
+    public class TechnicalMachineItem : BaseItem
     {
         public string Move {  get; private set; }
         public string MoveName { get; private set; }

@@ -9,8 +9,8 @@ namespace Core.Domain.Repositories.Abstactions
 {
     public interface IItemRepository
     {
-        Task<Item> GetByIdAsync(string id);
-        Task<IReadOnlyList<Item>> GetAllAsync();
-        Task<IReadOnlyList<Item>> GetByCategoryAsync(string category);
+        Task<BaseItem> GetByIdAsync(string id);
+        Task<IReadOnlyList<BaseItem>> GetAllAsync();
+        Task<IReadOnlyList<BaseItem>> GetByCategoryAsync(string category);
     }
 }

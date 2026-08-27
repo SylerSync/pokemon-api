@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Core.Services.Abstractions
 {
-    internal class IServiceManager
+    public interface IServiceManager
     {
+        IItemService ItemService { get; }
     }
 }
