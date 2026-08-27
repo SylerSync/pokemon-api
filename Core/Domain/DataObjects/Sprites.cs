@@ -23,9 +23,13 @@ namespace Core.Domain.DataObjects
             ShinyBack = shinyBack;
         }
 
-        public string Get(bool shiny, bool back)
+        public string Get(bool shiny, bool back) =>
+        (shiny, back) switch
         {
-            return shiny ? (back ? ShinyBack : ShinyFront) : (back ? Back : Front);
-        }
+            (false, false) => Front,
+            (false, true) => Back,
+            (true, false) => ShinyFront,
+            (true, true) => ShinyBack
+        };
     }
 }
