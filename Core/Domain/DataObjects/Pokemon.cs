@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,49 @@ using System.Threading.Tasks;
 
 namespace Core.Domain.DataObjects
 {
-    internal class Pokemon
+    public class Pokemon
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public Sprites Sprites { get; set; }
+        public List<TypeEnum> Types { get; set; } = new List<TypeEnum>();
+        public int Height { get; set; }
+        public int Weight { get; set; }
+        public string Cry { get; set; }
+        public int CaptureRate { get; set; }
+        public int TotalHP { get; set; }
+        public int CurrentHP { get; set; }
+        public List<Stat> Stats { get; set; }
+        public List<Move> Moves { get; set; } = new List<Move>();
+        public int TotalKOs { get; set; }
+        public int TotalFaints { get; set; }
+        public int Level { get; set; }
+        public EvolutionReqs EvolutionReqs { get; set; }
+        public int BaseExp { get; set; }
+        public int CurrentExp { get; set; }
+        public string[] MinorStatus { get; set; } = new string[0];
+
+        public Pokemon(int id, string name, Sprites sprites, List<TypeEnum> types, int height, int weight, string cry, int captureRate, int totalHP, int currentHP, List<Stat> stats, List<Move> moves, int totalKOs, int totalFaints, int level, EvolutionReqs evolutionReqs, int baseExp, int currentExp, string[] minorStatus)
+        {
+            Id = id;
+            Name = name;
+            Sprites = sprites;
+            Types = types;
+            Height = height;
+            Weight = weight;
+            Cry = cry;
+            CaptureRate = captureRate;
+            TotalHP = totalHP;
+            CurrentHP = currentHP;
+            Stats = stats;
+            Moves = moves;
+            TotalKOs = totalKOs;
+            TotalFaints = totalFaints;
+            Level = level;
+            EvolutionReqs = evolutionReqs;
+            BaseExp = baseExp;
+            CurrentExp = currentExp;
+            MinorStatus = minorStatus;
+        }
     }
 }

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Core.Domain.Enums
 {
-    internal class ItemEnum
+    public enum DamageClassEnum
     {
+        status,
+        physical,
+        special
     }
 }
