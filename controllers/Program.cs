@@ -1,12 +1,14 @@
 using controllers.Configuration;
+using Core.Domain.DataObjects;
 using Core.Domain.Repositories.Abstactions;
 using Core.Infrastructure;
 using Core.Infrastructure.Repositories;
 using Core.Services;
 using Core.Services.Abstractions;
 using Microsoft.Extensions.Options;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Conventions;
 using MongoDB.Driver;
-using System.Diagnostics;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +22,41 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
+
+
+
+// Global Conventions
+var conventionPack = new ConventionPack
+{
+    new CamelCaseElementNameConvention(),
+    new IgnoreExtraElementsConvention(true)
+};
+ConventionRegistry.Register("CamelCase", conventionPack, type => true);
+
+// Register BaseItem base class and Abstract classes
+BsonClassMap.RegisterClassMap<BaseItem>(cm =>
+{
+    cm.AutoMap();
+    cm.SetIsRootClass(true);
+});
+
+BsonClassMap.RegisterClassMap<EvolutionItem>();
+BsonClassMap.RegisterClassMap<MegaEvolutionItem>();
+BsonClassMap.RegisterClassMap<PokeballItem>();
+BsonClassMap.RegisterClassMap<RecoveryItem>();
+BsonClassMap.RegisterClassMap<TechnicalMachineItem>();
+
+// Register ItemEffect base class and Abstract classes
+BsonClassMap.RegisterClassMap<ItemEffect>(cm =>
+{
+    cm.AutoMap();
+    cm.SetIsRootClass(true);
+});
+BsonClassMap.RegisterClassMap<HealEffect>();
+BsonClassMap.RegisterClassMap<StatusHealEffect>();
+BsonClassMap.RegisterClassMap<PpHealEffect>();
+BsonClassMap.RegisterClassMap<PpMaxRaise>();
+BsonClassMap.RegisterClassMap<ReviveEffect>();
 
 // 1. Bind appsettings.json section to the configuration class
 builder.Services.Configure<MongoDBSetting>(

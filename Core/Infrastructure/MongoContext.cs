@@ -12,5 +12,6 @@ namespace Core.Infrastructure
         public MongoContext(IMongoDatabase database) => _database = database;
 
         public IMongoCollection<Pokemon> Pokemon => _database.GetCollection<Pokemon>("pokemon");
+        public IMongoCollection<BaseItem> Item => _database.GetCollection<BaseItem>("items");
     }
 }
