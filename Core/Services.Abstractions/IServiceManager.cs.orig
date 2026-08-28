@@ -9,7 +9,11 @@ namespace Core.Services.Abstractions
     public interface IServiceManager
     {
         IItemService ItemService { get; }
-        IPokemonService PokemonService { get; }
+<<<<<<< HEAD
+        IPokemonService IPokemonService { get; }
         IUserService IUserService { get; }
+=======
+        IPokemonService PokemonService { get; }
+>>>>>>> main
     }
 }

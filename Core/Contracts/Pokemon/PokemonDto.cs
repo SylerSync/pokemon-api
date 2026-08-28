@@ -1,5 +1,7 @@
 ﻿using Core.Domain.DataObjects;
 using Core.Domain.Enums;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +12,12 @@ namespace Core.Contracts.Pokemon
 {
     public class PokemonDto
     {
-        public int Id { get; set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string _id { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
+        public bool Shiny { get; set; }
         public Sprites Sprites { get; set; }
         public List<TypeEnum> Types { get; set; } = new List<TypeEnum>();
         public int Height { get; set; }
@@ -25,9 +31,9 @@ namespace Core.Contracts.Pokemon
         public int TotalKOs { get; set; }
         public int TotalFaints { get; set; }
         public int Level { get; set; }
-        public EvolutionReqs EvolutionReqs { get; set; }
+        public EvolutionReqs[] EvolutionReqs { get; set; }
         public int BaseExp { get; set; }
         public int CurrentExp { get; set; }
-        public string[] MinorStatus { get; set; } = new string[0];
+        public string[] MinorStatus { get; set; } = Array.Empty<string>();
     }
 }

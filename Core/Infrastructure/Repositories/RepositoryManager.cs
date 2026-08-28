@@ -1,4 +1,5 @@
 ﻿using Core.Domain.Repositories.Abstactions;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,11 @@ namespace Core.Infrastructure.Repositories
         private readonly Lazy<IPokemonRepository> _lazyPokemonRepo;
         private readonly Lazy<IUserRepository> _lazyUserRepository;
         
-        public RepositoryManager() 
+        public RepositoryManager(MongoContext database) 
         {
             _lazyItemRepository = new Lazy<IItemRepository>(() => new ItemRepository());
             _lazyUserRepository = new Lazy<IUserRepository>(() => new UserRepository());
+            _lazyPokemonRepo = new Lazy<IPokemonRepository>(() => new PokemonRepository(database));
         }
 
         public IItemRepository ItemRepository => _lazyItemRepository.Value;
