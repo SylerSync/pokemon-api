@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Core.Contracts.Pokemon;
+using Core.Services.Abstractions;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -6,17 +8,19 @@ namespace controllers.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PokemonController : ControllerBase
+    public class PokemonController : BaseController
     {
-        //private readonly IServiceManager _serviceManager;
+        public PokemonController(IServiceManager serviceManager) : base(serviceManager) 
+        {
 
-        //public PokemonController(IServiceManager serviceManager) => _serviceManager = serviceManager;
+        }
 
         // GET: api/<PokemonController>
         [HttpGet]
-        public IEnumerable<string> GetPokemon()
+        public async Task<List<PokemonDto>> GetPokemon()
         {
-            return new string[] { "value1", "value2" };
+            var pokemon = await _serviceManager.PokemonService.GetPokemonAsync();
+            return pokemon;
         }
 
         // GET api/<PokemonController>/5

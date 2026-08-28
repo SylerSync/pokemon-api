@@ -3,6 +3,7 @@ using Core.Domain.Repositories.Abstactions;
 using Core.Services.Abstractions;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -10,13 +11,10 @@ using System.Threading.Tasks;
 
 namespace Core.Services
 {
-    internal sealed class PokemonService : IPokemonService
+    internal sealed class PokemonService : ServiceBase, IPokemonService
     {
-        private readonly IPokemonRepository _pokemonRepository;
-
-        public PokemonService(IPokemonRepository pokemonRepository)
+        public PokemonService(IRepositoryManager repositoryManager) : base(repositoryManager)
         {
-            _pokemonRepository = pokemonRepository;
         }
 
         public Task AddPokemonAsync(PokemonDto pokemon, CancellationToken cancellationToken = default)
@@ -44,9 +42,23 @@ namespace Core.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<PokemonDto>> GetPokemonListAsync(CancellationToken cancellationToken = default)
+        public async Task<List<PokemonDto>> GetPokemonAsync(CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            var result = await _repositoryManager.PokemonRepository.GetPokemonAsync(cancellationToken);
+            var dtos = result.Select(p => new PokemonDto {
+                _id = p._id,
+                ID = p.ID,
+                Name = p.Name,
+                Shiny = p.Shiny,
+                Types = p.Types,
+                Sprites = p.Sprites,
+                Level = p.Level,
+                CurrentHP = p.CurrentHP,
+                TotalHP = p.TotalHP,
+                Moves = p.Moves.ToList()
+                }
+            ).ToList();
+            return dtos;
         }
     }
 }

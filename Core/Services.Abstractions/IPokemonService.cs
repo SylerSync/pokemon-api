@@ -10,7 +10,7 @@ namespace Core.Services.Abstractions
 {
     public interface IPokemonService
     {
-        Task<List<PokemonDto>> GetPokemonListAsync(CancellationToken cancellationToken = default);
+        Task<List<PokemonDto>> GetPokemonAsync(CancellationToken cancellationToken = default);
         Task<PokemonDto> GetPokemonByIDAsync(int id, CancellationToken cancellationToken = default);
         Task<PokemonDto> EvolvePokemonAsync(PokemonDto pokemon, CancellationToken cancellationToken = default);
         Task<PokemonDto> EditPokemonAsync(PokemonDto oldPokemon, PokemonDto newPokemon, CancellationToken cancellationToken = default);

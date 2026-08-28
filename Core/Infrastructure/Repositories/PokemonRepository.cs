@@ -1,5 +1,6 @@
 ﻿using Core.Domain.DataObjects;
 using Core.Domain.Repositories.Abstactions;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,12 @@ using System.Threading.Tasks;
 
 namespace Core.Infrastructure.Repositories
 {
-    internal sealed class PokemonRepository : IPokemonRepository
+    internal sealed class PokemonRepository : RepositoryBase, IPokemonRepository
     {
+        public PokemonRepository(MongoContext dbContext) : base(dbContext) 
+        {
+        }
+
         public Task AddPokemonAsync(Pokemon pokemon, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
@@ -33,7 +38,7 @@ namespace Core.Infrastructure.Repositories
 
         public Task<List<Pokemon>> GetPokemonAsync(CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            return _dbContext.Pokemon.Find(_ => true).ToListAsync(cancellationToken);
         }
 
         public Task<Pokemon> GetPokemonByIDAsync(int id, CancellationToken cancellationToken = default)

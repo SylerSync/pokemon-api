@@ -1,7 +1,10 @@
+using controllers.Configuration;
 using Core.Domain.Repositories.Abstactions;
+using Core.Infrastructure;
 using Core.Infrastructure.Repositories;
 using Core.Services;
 using Core.Services.Abstractions;
+using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using System.Diagnostics;
 
@@ -17,6 +20,21 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
+
+// 1. Bind appsettings.json section to the configuration class
+builder.Services.Configure<MongoDBSetting>(
+    builder.Configuration.GetSection("MongoDB"));
+// 2. Register MongoClient as a singleton
+builder.Services.AddSingleton<IMongoClient>(sp =>
+    new MongoClient(sp.GetRequiredService<IOptions<MongoDBSetting>>().Value.ConnectionString));
+
+// 3. Register the specific database instance
+builder.Services.AddSingleton(sp =>
+    sp.GetRequiredService<IMongoClient>()
+      .GetDatabase(sp.GetRequiredService<IOptions<MongoDBSetting>>().Value.DatabaseName));
+
+builder.Services.AddSingleton<MongoContext>();
+
 
 var app = builder.Build();
 

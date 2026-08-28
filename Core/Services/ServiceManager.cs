@@ -16,10 +16,10 @@ namespace Core.Services
         public ServiceManager(IRepositoryManager repositoryManager) 
         {
             _lazyItemService = new Lazy<IItemService>(() => new ItemService(repositoryManager.ItemRepository));
-            _lazyPokemonService = new Lazy<IPokemonService>(() => new PokemonService(repositoryManager.PokemonRepository));
+            _lazyPokemonService = new Lazy<IPokemonService>(() => new PokemonService(repositoryManager));
         }
 
         public IItemService ItemService => _lazyItemService.Value;
-        public IPokemonService IPokemonService => _lazyPokemonService.Value;
+        public IPokemonService PokemonService => _lazyPokemonService.Value;
     }
 }
