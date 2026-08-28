@@ -18,6 +18,7 @@ namespace Core.Domain.DataObjects
         public string Name { get; set; }
         public bool Shiny { get; set; }
         public Sprites Sprites { get; set; }
+        [BsonRepresentation(BsonType.String)]
         public List<TypeEnum> Types { get; set; } = new List<TypeEnum>();
         public int Height { get; set; }
         public int Weight { get; set; }
@@ -27,15 +28,16 @@ namespace Core.Domain.DataObjects
         public int CurrentHP { get; set; }
         public List<Stat> Stats { get; set; }
         public List<Move> Moves { get; set; } = new List<Move>();
+        public List<Move> LeanrableMoves { get; set; } = new List<Move>();
         public int TotalKOs { get; set; }
         public int TotalFaints { get; set; }
         public int Level { get; set; }
-        public EvolutionReqs[] EvolutionReqs { get; set; }
+        public List<EvolutionReqs> EvolutionReqs { get; set; }
         public int BaseExp { get; set; }
         public int CurrentExp { get; set; }
         public string[] MinorStatus { get; set; } = Array.Empty<string>();
 
-        public Pokemon(string _idvalue, int id, string name, bool shiny, Sprites sprites, List<TypeEnum> types, int height, int weight, string cry, int captureRate, int totalHP, int currentHP, List<Stat> stats, List<Move> moves, int totalKOs, int totalFaints, int level, EvolutionReqs[] evolutionReqs, int baseExp, int currentExp, string[] minorStatus)
+        public Pokemon(string _idvalue, int id, string name, bool shiny, Sprites sprites, List<TypeEnum> types, int height, int weight, string cry, int captureRate, int totalHP, int currentHP, List<Stat> stats, List<Move> moves, List<Move> learnableMoves, int totalKOs, int totalFaints, int level, List<EvolutionReqs> evolutionReqs, int baseExp, int currentExp, string[] minorStatus)
         {
             _id = _idvalue;
             ID = id;
@@ -51,6 +53,7 @@ namespace Core.Domain.DataObjects
             CurrentHP = currentHP;
             Stats = stats;
             Moves = moves;
+            LeanrableMoves = learnableMoves;
             TotalKOs = totalKOs;
             TotalFaints = totalFaints;
             Level = level;

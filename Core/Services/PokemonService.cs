@@ -46,17 +46,16 @@ namespace Core.Services
         {
             var result = await _repositoryManager.PokemonRepository.GetPokemonAsync(cancellationToken);
             var dtos = result.Select(p => new PokemonDto {
-                _id = p._id,
                 ID = p.ID,
                 Name = p.Name,
-                Shiny = p.Shiny,
                 Types = p.Types,
                 Sprites = p.Sprites,
-                Level = p.Level,
-                CurrentHP = p.CurrentHP,
-                TotalHP = p.TotalHP,
-                Moves = p.Moves.ToList()
-                }
+                Height = p.Height,
+                Weight = p.Weight,
+                Cry = p.Cry,
+                Stats = p.Stats,
+                EvolutionReqs = p.EvolutionReqs
+            }
             ).ToList();
             return dtos;
         }
