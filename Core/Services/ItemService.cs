@@ -1,40 +1,34 @@
 ﻿using Core.Contracts.Item;
-using Core.Services.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Core.Domain.DataObjects;
-using Core.Domain.Repositories;
 using Core.Domain.Repositories.Abstactions;
+using Core.Services.Abstractions;
+using System.Collections.Generic;
 using System.Linq;
-using System.Diagnostics.Contracts;
-using Core.Infrastructure.Repositories;
+using System.Threading.Tasks;
 
 namespace Core.Services
 {
     internal sealed class ItemService : ServiceBase, IItemService
     {
-
-        public ItemService(IRepositoryManager repositoryManager): base(repositoryManager)
+        public ItemService(IRepositoryManager repositoryManager) : base(repositoryManager)
         {
-            
         }
 
-        //Get a single item using and Id
+        // Get a single item using an Id
         public async Task<ItemDto> GetItemByIdAsync(string Id)
         {
             BaseItem item = await _repositoryManager.ItemRepository.GetByIdAsync(Id);
             return item == null ? null : MapToDto(item);
         }
 
-        //Get all items
+        // Get all items
         public async Task<IReadOnlyList<ItemDto>> GetAllItemsAsync()
         {
             IReadOnlyList<BaseItem> items = await _repositoryManager.ItemRepository.GetAllAsync();
             return items.Select(MapToDto).ToList().AsReadOnly();
         }
 
-        //Get all items based on a category
+        // Get all items based on a category
         public async Task<IReadOnlyList<ItemDto>> GetItemsByCategoryAsync(string category)
         {
             IReadOnlyList<BaseItem> items = await _repositoryManager.ItemRepository.GetByCategoryAsync(category);
@@ -68,42 +62,28 @@ namespace Core.Services
                     break;
                 case MegaEvolutionItem megaEvolution:
                     dto.PokemonName = megaEvolution.PokemonName;
-                    dto.MegaFormName = megaEvolution.MegaFormName;
+                    dto.MegaFormName = megaEvolution.MegaName;
                     dto.Description = megaEvolution.Description;
                     break;
                 case EvolutionItem evolution:
                     dto.Description = evolution.Description;
                     break;
             }
+
             return dto;
         }
 
-        // Map the effects of Recovery items to the dto
+        // Map the single concrete ItemEffect properties to the DTO
         private void MapEffectDetails(ItemEffect effect, ItemDto dto)
         {
             if (effect == null) return;
 
             dto.EffectType = effect.EffectType;
-
-            switch (effect)
-            {
-                case HealEffect heal:
-                    dto.Amount = heal.Amount;
-                    break;
-                case StatusHealEffect statusHeal:
-                    dto.Status = statusHeal.Status;
-                    break;
-                case PpHealEffect ppHeal:
-                    dto.Scope = ppHeal.Scope;
-                    dto.Amount = ppHeal.Amount;
-                    break;
-                case PpMaxRaise ppMax:
-                    dto.Scope = ppMax.Scope;
-                    dto.Stages = ppMax.Stages;
-                    break;
-            }
-
+            dto.Amount = effect.Amount;
+            dto.Percent = effect.Percent;
+            dto.Status = effect.Status;
+            dto.Scope = effect.Scope;
+            dto.Stages = effect.Stages;
         }
-
     }
 }

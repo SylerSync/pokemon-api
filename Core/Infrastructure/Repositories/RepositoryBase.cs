@@ -6,8 +6,8 @@ namespace Core.Infrastructure.Repositories
 {
     internal abstract class RepositoryBase
     {
-        protected readonly MongoContext _dbContext;
+        protected readonly AppDbContext _dbContext;
 
-        protected RepositoryBase(MongoContext dbContext) => _dbContext = dbContext;
+        protected RepositoryBase(AppDbContext dbContext) => _dbContext = dbContext;
     }
 }

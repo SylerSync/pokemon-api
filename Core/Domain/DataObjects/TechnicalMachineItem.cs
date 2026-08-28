@@ -2,10 +2,11 @@
 {
     public class TechnicalMachineItem : BaseItem
     {
-        public string Move {  get; init; }
-        public string MoveName { get; init; }
-        public string Type { get; init; }
+        public string? Move {  get; init; }
+        public string? MoveName { get; init; }
+        public string? Type { get; init; }
 
+        public TechnicalMachineItem() { } // Empty contstructor for Entity Framework
         public TechnicalMachineItem(string id, string name, string category, int cost, string move, string moveName, string type): base(id, name, category, cost)
         {
             Move = move;

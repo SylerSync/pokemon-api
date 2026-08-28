@@ -1,77 +1,44 @@
 using controllers.Configuration;
-using Core.Domain.DataObjects;
 using Core.Domain.Repositories.Abstactions;
 using Core.Infrastructure;
 using Core.Infrastructure.Repositories;
 using Core.Services;
 using Core.Services.Abstractions;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Conventions;
-using MongoDB.Driver;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 
-
-
-// Global Conventions
 var conventionPack = new ConventionPack
 {
-    new CamelCaseElementNameConvention(),
-    new IgnoreExtraElementsConvention(true)
+    new CamelCaseElementNameConvention(),    // Auto-maps C# PascalCase -> BSON camelCase
+    new IgnoreExtraElementsConvention(true)   // Prevents crashes if BSON has extra fields
 };
-ConventionRegistry.Register("CamelCase", conventionPack, type => true);
 
-// Register BaseItem base class and Abstract classes
-BsonClassMap.RegisterClassMap<BaseItem>(cm =>
-{
-    cm.AutoMap();
-    cm.SetIsRootClass(true);
-});
-
-BsonClassMap.RegisterClassMap<EvolutionItem>();
-BsonClassMap.RegisterClassMap<MegaEvolutionItem>();
-BsonClassMap.RegisterClassMap<PokeballItem>();
-BsonClassMap.RegisterClassMap<RecoveryItem>();
-BsonClassMap.RegisterClassMap<TechnicalMachineItem>();
-
-// Register ItemEffect base class and Abstract classes
-BsonClassMap.RegisterClassMap<ItemEffect>(cm =>
-{
-    cm.AutoMap();
-    cm.SetIsRootClass(true);
-});
-BsonClassMap.RegisterClassMap<HealEffect>();
-BsonClassMap.RegisterClassMap<StatusHealEffect>();
-BsonClassMap.RegisterClassMap<PpHealEffect>();
-BsonClassMap.RegisterClassMap<PpMaxRaise>();
-BsonClassMap.RegisterClassMap<ReviveEffect>();
+ConventionRegistry.Register("GlobalConventions", conventionPack, _ => true);
 
 // 1. Bind appsettings.json section to the configuration class
 builder.Services.Configure<MongoDBSetting>(
     builder.Configuration.GetSection("MongoDB"));
-// 2. Register MongoClient as a singleton
-builder.Services.AddSingleton<IMongoClient>(sp =>
-    new MongoClient(sp.GetRequiredService<IOptions<MongoDBSetting>>().Value.ConnectionString));
 
-// 3. Register the specific database instance
-builder.Services.AddSingleton(sp =>
-    sp.GetRequiredService<IMongoClient>()
-      .GetDatabase(sp.GetRequiredService<IOptions<MongoDBSetting>>().Value.DatabaseName));
+// 2. Register AppDbContext with MongoDB EF Core Provider
+builder.Services.AddDbContext<AppDbContext>((sp, options) =>
+{
+    var mongoSettings = sp.GetRequiredService<IOptions<MongoDBSetting>>().Value;
 
-builder.Services.AddSingleton<MongoContext>();
-
+    options.UseMongoDB(mongoSettings.ConnectionString, mongoSettings.DatabaseName)
+           .UseCamelCaseNamingConvention(); // <--- Forces EF Core to map all properties to camelCase in MongoDB
+});
 
 var app = builder.Build();
 

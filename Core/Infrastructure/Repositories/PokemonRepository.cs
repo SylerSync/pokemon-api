@@ -1,6 +1,6 @@
 ﻿using Core.Domain.DataObjects;
 using Core.Domain.Repositories.Abstactions;
-using MongoDB.Driver;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace Core.Infrastructure.Repositories
 {
     internal sealed class PokemonRepository : RepositoryBase, IPokemonRepository
     {
-        public PokemonRepository(MongoContext dbContext) : base(dbContext) 
+        public PokemonRepository(AppDbContext dbContext) : base(dbContext) 
         {
         }
 
@@ -38,7 +38,7 @@ namespace Core.Infrastructure.Repositories
 
         public Task<List<Pokemon>> GetPokemonAsync(CancellationToken cancellationToken = default)
         {
-            return _dbContext.Pokemon.Find(_ => true).ToListAsync(cancellationToken);
+            return _dbContext.Pokemon.ToListAsync(cancellationToken);
         }
 
         public Task<Pokemon> GetPokemonByIDAsync(int id, CancellationToken cancellationToken = default)

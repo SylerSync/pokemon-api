@@ -15,6 +15,8 @@
             Cost = cost;
         }
 
+        public BaseItem() { } // Empty contstructor for Entity Framework
+
     }
 
 

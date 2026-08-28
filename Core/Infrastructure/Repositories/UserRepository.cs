@@ -1,11 +1,12 @@
 ﻿using Core.Domain.DataObjects;
 using Core.Domain.Repositories.Abstactions;
+using Microsoft.EntityFrameworkCore;
 
 namespace Core.Infrastructure.Repositories
 {
     internal sealed class UserRepository : RepositoryBase, IUserRepository
     {
-        public UserRepository(MongoContext dbContext) : base(dbContext)
+        public UserRepository(AppDbContext dbContext) : base(dbContext)
         {
         }
 
