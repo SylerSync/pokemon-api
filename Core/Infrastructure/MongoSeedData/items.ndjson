@@ -1,204 +1,211 @@
-{"id":"fire-stone","name":"Fire Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It has a fiery orange heart."}
-{"id":"water-stone","name":"Water Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It is a clear, light blue."}
-{"id":"thunder-stone","name":"Thunder Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It has a distinct thunderbolt pattern."}
-{"id":"leaf-stone","name":"Leaf Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable leaf pattern."}
-{"id":"moon-stone","name":"Moon Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It is as black as the night sky."}
-{"id":"sun-stone","name":"Sun Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It burns red like the evening sun."}
-{"id":"shiny-stone","name":"Shiny Stone","category":"evolution-stones","cost":4500,"description":"A peculiar stone that can make certain species of Pokémon evolve. It shines with a dazzling light."}
-{"id":"dusk-stone","name":"Dusk Stone","category":"evolution-stones","cost":4500,"description":"A peculiar stone that can make certain species of Pokémon evolve. It holds a dark shadow."}
-{"id":"dawn-stone","name":"Dawn Stone","category":"evolution-stones","cost":4500,"description":"A peculiar stone that can make certain species of Pokémon evolve. It sparkles like a glittering eye."}
-{"id":"ice-stone","name":"Ice Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It has a snowflake pattern."}
-{"id":"kings-rock","name":"King's Rock","category":"held-items","cost":4500,"description":"An item to be held by a Pokémon. When held, it may cause the target to flinch upon taking damage."}
-{"id":"metal-coat","name":"Metal Coat","category":"held-items","cost":4500,"description":"An item to be held by a Pokémon. It is a special metallic film that boosts Steel-type moves."}
-{"id":"dragon-scale","name":"Dragon Scale","category":"held-items","cost":4500,"description":"A thick, tough scale. Dragon-type Pokémon may be holding it."}
-{"id":"up-grade","name":"Upgrade","category":"held-items","cost":5000,"description":"A transparent device filled with all sorts of data. It was produced by Silph Co."}
-{"id":"dubious-disc","name":"Dubious Disc","category":"held-items","cost":5000,"description":"A transparent device overflowing with dubious data. Its producer is unknown."}
-{"id":"protector","name":"Protector","category":"held-items","cost":4500,"description":"A protective item. It is extremely stiff and heavy."}
-{"id":"electirizer","name":"Electirizer","category":"held-items","cost":5000,"description":"A box packed with a tremendous amount of electric energy."}
-{"id":"magmarizer","name":"Magmarizer","category":"held-items","cost":5000,"description":"A box packed with a tremendous amount of magma energy."}
-{"id":"reaper-cloth","name":"Reaper Cloth","category":"held-items","cost":4500,"description":"A cloth imbued with terrible spiritual energy."}
-{"id":"deep-sea-tooth","name":"Deep Sea Tooth","category":"held-items","cost":4000,"description":"A tooth that glints a sharp silver. It raises Special Attack when held by Clamperl."}
-{"id":"deep-sea-scale","name":"Deep Sea Scale","category":"held-items","cost":4000,"description":"A scale that shines a faint pink. It raises Special Defense when held by Clamperl."}
-{"id":"prism-scale","name":"Prism Scale","category":"held-items","cost":4500,"description":"A mysterious scale that shines in rainbow colors. It causes certain Pokémon to evolve."}
-{"id":"oval-stone","name":"Oval Stone","category":"held-items","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It's shaped like an egg."}
-{"id":"sachet","name":"Sachet","category":"held-items","cost":4000,"description":"A sachet filled with fragrant sachet powder that exhales a faint perfume."}
-{"id":"whipped-dream","name":"Whipped Dream","category":"held-items","cost":4000,"description":"A soft and sweet treat made of fluffy whipped cream."}
-{"id":"razor-claw","name":"Razor Claw","category":"held-items","cost":4500,"description":"An item to be held by a Pokémon. It is a sharply hooked claw that boosts critical-hit ratio."}
-{"id":"razor-fang","name":"Razor Fang","category":"held-items","cost":4500,"description":"An item to be held by a Pokémon. It may cause the target to flinch on attack."}
-{"id":"sweet-apple","name":"Sweet Apple","category":"evolution","cost":3500,"description":"A peculiar apple that can make a certain species of Pokémon evolve. It is exceptionally sweet."}
-{"id":"tart-apple","name":"Tart Apple","category":"evolution","cost":3500,"description":"A peculiar apple that can make a certain species of Pokémon evolve. It is exceptionally tart."}
-{"id":"syrupy-apple","name":"Syrupy Apple","category":"evolution","cost":3500,"description":"A peculiar apple that can make a certain species of Pokémon evolve. It is covered in sweet syrup."}
-{"id":"chipped-pot","name":"Chipped Pot","category":"evolution","cost":4000,"description":"A peculiar teapot that can make a certain species of Pokémon evolve. It has a chip on it."}
-{"id":"cracked-pot","name":"Cracked Pot","category":"evolution","cost":4000,"description":"A peculiar teapot that can make a certain species of Pokémon evolve. It has a crack in it."}
-{"id":"unremarkable-teacup","name":"Unremarkable Teacup","category":"evolution","cost":4000,"description":"A peculiar teacup that can make a certain species of Pokémon evolve. It is quite plain."}
-{"id":"masterpiece-teacup","name":"Masterpiece Teacup","category":"evolution","cost":5000,"description":"A peculiar teacup that can make a certain species of Pokémon evolve. It is a masterpiece."}
-{"id":"galarica-cuff","name":"Galarica Cuff","category":"evolution","cost":4500,"description":"A cuff made from woven Galarica Twigs that can make a Galarian Slowpoke evolve."}
-{"id":"galarica-wreath","name":"Galarica Wreath","category":"evolution","cost":4500,"description":"A wreath made from woven Galarica Twigs that can make a Galarian Slowpoke evolve."}
-{"id":"black-augurite","name":"Black Augurite","category":"evolution","cost":5000,"description":"A glass-like black stone that can make a certain species of Pokémon evolve."}
-{"id":"peat-block","name":"Peat Block","category":"evolution","cost":5000,"description":"A block of muddy peat that can make Ursaring evolve during a full moon."}
-{"id":"auspicious-armor","name":"Auspicious Armor","category":"evolution","cost":5500,"description":"A peculiar suit of armor that can make Charcadet evolve into Armarouge."}
-{"id":"malicious-armor","name":"Malicious Armor","category":"evolution","cost":5500,"description":"A peculiar suit of armor that can make Charcadet evolve into Ceruledge."}
-{"id":"scroll-of-darkness","name":"Scroll of Darkness","category":"evolution","cost":6000,"description":"A secret scroll that can make Kubfu evolve into Single Strike Style Urshifu."}
-{"id":"scroll-of-waters","name":"Scroll of Waters","category":"evolution","cost":6000,"description":"A secret scroll that can make Kubfu evolve into Rapid Strike Style Urshifu."}
-{"id":"abomasite","name":"Abomasite","category":"mega-items","cost":10000,"pokemon":"abomasnow","megaForm":"abomasnow-mega","description":"Allows Abomasnow to Mega Evolve in battle when held."}
-{"id":"absolite","name":"Absolite","category":"mega-items","cost":10000,"pokemon":"absol","megaForm":"absol-mega","description":"Allows Absol to Mega Evolve in battle when held."}
-{"id":"absolite-z","name":"Absolite Z","category":"mega-items","cost":12000,"pokemon":"absol","megaForm":"absol-mega-z","description":"Allows Absol to Mega Evolve into Mega Absol Z in battle when held."}
-{"id":"aerodactylite","name":"Aerodactylite","category":"mega-items","cost":10000,"pokemon":"aerodactyl","megaForm":"aerodactyl-mega","description":"Allows Aerodactyl to Mega Evolve in battle when held."}
-{"id":"aggronite","name":"Aggronite","category":"mega-items","cost":10000,"pokemon":"aggron","megaForm":"aggron-mega","description":"Allows Aggron to Mega Evolve in battle when held."}
-{"id":"alakazamite","name":"Alakazamite","category":"mega-items","cost":10000,"pokemon":"alakazam","megaForm":"alakazam-mega","description":"Allows Alakazam to Mega Evolve in battle when held."}
-{"id":"altarianite","name":"Altarianite","category":"mega-items","cost":10000,"pokemon":"altaria","megaForm":"altaria-mega","description":"Allows Altaria to Mega Evolve in battle when held."}
-{"id":"ampharosite","name":"Ampharosite","category":"mega-items","cost":10000,"pokemon":"ampharos","megaForm":"ampharos-mega","description":"Allows Ampharos to Mega Evolve in battle when held."}
-{"id":"audinite","name":"Audinite","category":"mega-items","cost":10000,"pokemon":"audino","megaForm":"audino-mega","description":"Allows Audino to Mega Evolve in battle when held."}
-{"id":"banettite","name":"Banettite","category":"mega-items","cost":10000,"pokemon":"banette","megaForm":"banette-mega","description":"Allows Banette to Mega Evolve in battle when held."}
-{"id":"barbaracite","name":"Barbaracite","category":"mega-items","cost":10000,"pokemon":"barbaracle","megaForm":"barbaracle-mega","description":"Allows Barbaracle to Mega Evolve in battle when held."}
-{"id":"baxcalibrite","name":"Baxcalibrite","category":"mega-items","cost":12000,"pokemon":"baxcalibur","megaForm":"baxcalibur-mega","description":"Allows Baxcalibur to Mega Evolve in battle when held."}
-{"id":"beedrillite","name":"Beedrillite","category":"mega-items","cost":10000,"pokemon":"beedrill","megaForm":"beedrill-mega","description":"Allows Beedrill to Mega Evolve in battle when held."}
-{"id":"blastoisinite","name":"Blastoisinite","category":"mega-items","cost":10000,"pokemon":"blastoise","megaForm":"blastoise-mega","description":"Allows Blastoise to Mega Evolve in battle when held."}
-{"id":"blazikenite","name":"Blazikenite","category":"mega-items","cost":10000,"pokemon":"blaziken","megaForm":"blaziken-mega","description":"Allows Blaziken to Mega Evolve in battle when held."}
-{"id":"cameruptite","name":"Cameruptite","category":"mega-items","cost":10000,"pokemon":"camerupt","megaForm":"camerupt-mega","description":"Allows Camerupt to Mega Evolve in battle when held."}
-{"id":"chandelurite","name":"Chandelurite","category":"mega-items","cost":10000,"pokemon":"chandelure","megaForm":"chandelure-mega","description":"Allows Chandelure to Mega Evolve in battle when held."}
-{"id":"charizardite-x","name":"Charizardite X","category":"mega-items","cost":10000,"pokemon":"charizard","megaForm":"charizard-mega-x","description":"Allows Charizard to Mega Evolve into Mega Charizard X in battle when held."}
-{"id":"charizardite-y","name":"Charizardite Y","category":"mega-items","cost":10000,"pokemon":"charizard","megaForm":"charizard-mega-y","description":"Allows Charizard to Mega Evolve into Mega Charizard Y in battle when held."}
-{"id":"chesnaughtite","name":"Chesnaughtite","category":"mega-items","cost":10000,"pokemon":"chesnaught","megaForm":"chesnaught-mega","description":"Allows Chesnaught to Mega Evolve in battle when held."}
-{"id":"chimechite","name":"Chimechite","category":"mega-items","cost":10000,"pokemon":"chimecho","megaForm":"chimecho-mega","description":"Allows Chimecho to Mega Evolve in battle when held."}
-{"id":"clefablite","name":"Clefablite","category":"mega-items","cost":10000,"pokemon":"clefable","megaForm":"clefable-mega","description":"Allows Clefable to Mega Evolve in battle when held."}
-{"id":"crabominite","name":"Crabominite","category":"mega-items","cost":10000,"pokemon":"crabominable","megaForm":"crabominable-mega","description":"Allows Crabominable to Mega Evolve in battle when held."}
-{"id":"darkranite","name":"Darkranite","category":"mega-items","cost":15000,"pokemon":"darkrai","megaForm":"darkrai-mega","description":"Allows Darkrai to Mega Evolve in battle when held."}
-{"id":"delphoxite","name":"Delphoxite","category":"mega-items","cost":10000,"pokemon":"delphox","megaForm":"delphox-mega","description":"Allows Delphox to Mega Evolve in battle when held."}
-{"id":"diancite","name":"Diancite","category":"mega-items","cost":10000,"pokemon":"diancie","megaForm":"diancie-mega","description":"Allows Diancie to Mega Evolve in battle when held."}
-{"id":"dragalgite","name":"Dragalgite","category":"mega-items","cost":10000,"pokemon":"dragalge","megaForm":"dragalge-mega","description":"Allows Dragalge to Mega Evolve in battle when held."}
-{"id":"dragoninite","name":"Dragoninite","category":"mega-items","cost":12000,"pokemon":"dragonite","megaForm":"dragonite-mega","description":"Allows Dragonite to Mega Evolve in battle when held."}
-{"id":"drampanite","name":"Drampanite","category":"mega-items","cost":10000,"pokemon":"drampa","megaForm":"drampa-mega","description":"Allows Drampa to Mega Evolve in battle when held."}
-{"id":"eelektrossite","name":"Eelektrossite","category":"mega-items","cost":10000,"pokemon":"eelektross","megaForm":"eelektross-mega","description":"Allows Eelektross to Mega Evolve in battle when held."}
-{"id":"emboarite","name":"Emboarite","category":"mega-items","cost":10000,"pokemon":"emboar","megaForm":"emboar-mega","description":"Allows Emboar to Mega Evolve in battle when held."}
-{"id":"excadrite","name":"Excadrite","category":"mega-items","cost":10000,"pokemon":"excadrill","megaForm":"excadrill-mega","description":"Allows Excadrill to Mega Evolve in battle when held."}
-{"id":"falinksite","name":"Falinksite","category":"mega-items","cost":10000,"pokemon":"falinks","megaForm":"falinks-mega","description":"Allows Falinks to Mega Evolve in battle when held."}
-{"id":"feraligite","name":"Feraligite","category":"mega-items","cost":10000,"pokemon":"feraligatr","megaForm":"feraligatr-mega","description":"Allows Feraligatr to Mega Evolve in battle when held."}
-{"id":"floettite","name":"Floettite","category":"mega-items","cost":10000,"pokemon":"floette","megaForm":"floette-eternal-mega","description":"Allows Eternal Flower Floette to Mega Evolve in battle when held."}
-{"id":"froslassite","name":"Froslassite","category":"mega-items","cost":10000,"pokemon":"froslass","megaForm":"froslass-mega","description":"Allows Froslass to Mega Evolve in battle when held."}
-{"id":"galladite","name":"Galladite","category":"mega-items","cost":10000,"pokemon":"gallade","megaForm":"gallade-mega","description":"Allows Gallade to Mega Evolve in battle when held."}
-{"id":"garchompite","name":"Garchompite","category":"mega-items","cost":10000,"pokemon":"garchomp","megaForm":"garchomp-mega","description":"Allows Garchomp to Mega Evolve in battle when held."}
-{"id":"garchompite-z","name":"Garchompite Z","category":"mega-items","cost":12000,"pokemon":"garchomp","megaForm":"garchomp-mega-z","description":"Allows Garchomp to Mega Evolve into Mega Garchomp Z in battle when held."}
-{"id":"gardevoirite","name":"Gardevoirite","category":"mega-items","cost":10000,"pokemon":"gardevoir","megaForm":"gardevoir-mega","description":"Allows Gardevoir to Mega Evolve in battle when held."}
-{"id":"gengarite","name":"Gengarite","category":"mega-items","cost":10000,"pokemon":"gengar","megaForm":"gengar-mega","description":"Allows Gengar to Mega Evolve in battle when held."}
-{"id":"glalitite","name":"Glalitite","category":"mega-items","cost":10000,"pokemon":"glalie","megaForm":"glalie-mega","description":"Allows Glalie to Mega Evolve in battle when held."}
-{"id":"glimmoranite","name":"Glimmoranite","category":"mega-items","cost":10000,"pokemon":"glimmora","megaForm":"glimmora-mega","description":"Allows Glimmora to Mega Evolve in battle when held."}
-{"id":"golisopite","name":"Golisopite","category":"mega-items","cost":10000,"pokemon":"golisopod","megaForm":"golisopod-mega","description":"Allows Golisopod to Mega Evolve in battle when held."}
-{"id":"golurkite","name":"Golurkite","category":"mega-items","cost":10000,"pokemon":"golurk","megaForm":"golurk-mega","description":"Allows Golurk to Mega Evolve in battle when held."}
-{"id":"greninjite","name":"Greninjite","category":"mega-items","cost":10000,"pokemon":"greninja","megaForm":"greninja-mega","description":"Allows Greninja to Mega Evolve in battle when held."}
-{"id":"gyaradosite","name":"Gyaradosite","category":"mega-items","cost":10000,"pokemon":"gyarados","megaForm":"gyarados-mega","description":"Allows Gyarados to Mega Evolve in battle when held."}
-{"id":"hawluchanite","name":"Hawluchanite","category":"mega-items","cost":10000,"pokemon":"hawlucha","megaForm":"hawlucha-mega","description":"Allows Hawlucha to Mega Evolve in battle when held."}
-{"id":"heatranite","name":"Heatranite","category":"mega-items","cost":15000,"pokemon":"heatran","megaForm":"heatran-mega","description":"Allows Heatran to Mega Evolve in battle when held."}
-{"id":"heracronite","name":"Heracronite","category":"mega-items","cost":10000,"pokemon":"heracross","megaForm":"heracross-mega","description":"Allows Heracross to Mega Evolve in battle when held."}
-{"id":"houndoominite","name":"Houndoominite","category":"mega-items","cost":10000,"pokemon":"houndoom","megaForm":"houndoom-mega","description":"Allows Houndoom to Mega Evolve in battle when held."}
-{"id":"kangaskhanite","name":"Kangaskhanite","category":"mega-items","cost":10000,"pokemon":"kangaskhan","megaForm":"kangaskhan-mega","description":"Allows Kangaskhan to Mega Evolve in battle when held."}
-{"id":"latiasite","name":"Latiasite","category":"mega-items","cost":10000,"pokemon":"latias","megaForm":"latias-mega","description":"Allows Latias to Mega Evolve in battle when held."}
-{"id":"latiosite","name":"Latiosite","category":"mega-items","cost":10000,"pokemon":"latios","megaForm":"latios-mega","description":"Allows Latios to Mega Evolve in battle when held."}
-{"id":"lopunnite","name":"Lopunnite","category":"mega-items","cost":10000,"pokemon":"lopunny","megaForm":"lopunny-mega","description":"Allows Lopunny to Mega Evolve in battle when held."}
-{"id":"lucarionite","name":"Lucarionite","category":"mega-items","cost":10000,"pokemon":"lucario","megaForm":"lucario-mega","description":"Allows Lucario to Mega Evolve in battle when held."}
-{"id":"lucarionite-z","name":"Lucarionite Z","category":"mega-items","cost":12000,"pokemon":"lucario","megaForm":"lucario-mega-z","description":"Allows Lucario to Mega Evolve into Mega Lucario Z in battle when held."}
-{"id":"magearnite","name":"Magearnite","category":"mega-items","cost":15000,"pokemon":"magearna","megaForm":"magearna-mega","description":"Allows Magearna to Mega Evolve in battle when held."}
-{"id":"malamarite","name":"Malamarite","category":"mega-items","cost":10000,"pokemon":"malamar","megaForm":"malamar-mega","description":"Allows Malamar to Mega Evolve in battle when held."}
-{"id":"manectite","name":"Manectite","category":"mega-items","cost":10000,"pokemon":"manectric","megaForm":"manectric-mega","description":"Allows Manectric to Mega Evolve in battle when held."}
-{"id":"mawilite","name":"Mawilite","category":"mega-items","cost":10000,"pokemon":"mawile","megaForm":"mawile-mega","description":"Allows Mawile to Mega Evolve in battle when held."}
-{"id":"medichamite","name":"Medichamite","category":"mega-items","cost":10000,"pokemon":"medicham","megaForm":"medicham-mega","description":"Allows Medicham to Mega Evolve in battle when held."}
-{"id":"meganiumite","name":"Meganiumite","category":"mega-items","cost":10000,"pokemon":"meganium","megaForm":"meganium-mega","description":"Allows Meganium to Mega Evolve in battle when held."}
-{"id":"meowsticite","name":"Meowsticite","category":"mega-items","cost":10000,"pokemon":"meowstic","megaForm":"meowstic-mega","description":"Allows Meowstic to Mega Evolve in battle when held."}
-{"id":"metagrossite","name":"Metagrossite","category":"mega-items","cost":10000,"pokemon":"metagross","megaForm":"metagross-mega","description":"Allows Metagross to Mega Evolve in battle when held."}
-{"id":"mewtwonite-x","name":"Mewtwonite X","category":"mega-items","cost":10000,"pokemon":"mewtwo","megaForm":"mewtwo-mega-x","description":"Allows Mewtwo to Mega Evolve into Mega Mewtwo X in battle when held."}
-{"id":"mewtwonite-y","name":"Mewtwonite Y","category":"mega-items","cost":10000,"pokemon":"mewtwo","megaForm":"mewtwo-mega-y","description":"Allows Mewtwo to Mega Evolve into Mega Mewtwo Y in battle when held."}
-{"id":"pidgeotite","name":"Pidgeotite","category":"mega-items","cost":10000,"pokemon":"pidgeot","megaForm":"pidgeot-mega","description":"Allows Pidgeot to Mega Evolve in battle when held."}
-{"id":"pinsirite","name":"Pinsirite","category":"mega-items","cost":10000,"pokemon":"pinsir","megaForm":"pinsir-mega","description":"Allows Pinsir to Mega Evolve in battle when held."}
-{"id":"pyroarite","name":"Pyroarite","category":"mega-items","cost":10000,"pokemon":"pyroar","megaForm":"pyroar-mega","description":"Allows Pyroar to Mega Evolve in battle when held."}
-{"id":"raichunite-x","name":"Raichunite X","category":"mega-items","cost":10000,"pokemon":"raichu","megaForm":"raichu-mega-x","description":"Allows Raichu to Mega Evolve into Mega Raichu X in battle when held."}
-{"id":"raichunite-y","name":"Raichunite Y","category":"mega-items","cost":10000,"pokemon":"raichu","megaForm":"raichu-mega-y","description":"Allows Raichu to Mega Evolve into Mega Raichu Y in battle when held."}
-{"id":"sablenite","name":"Sablenite","category":"mega-items","cost":10000,"pokemon":"sableye","megaForm":"sableye-mega","description":"Allows Sableye to Mega Evolve in battle when held."}
-{"id":"salamencite","name":"Salamencite","category":"mega-items","cost":10000,"pokemon":"salamence","megaForm":"salamence-mega","description":"Allows Salamence to Mega Evolve in battle when held."}
-{"id":"sceptilite","name":"Sceptilite","category":"mega-items","cost":10000,"pokemon":"sceptile","megaForm":"sceptile-mega","description":"Allows Sceptile to Mega Evolve in battle when held."}
-{"id":"scizorite","name":"Scizorite","category":"mega-items","cost":10000,"pokemon":"scizor","megaForm":"scizor-mega","description":"Allows Scizor to Mega Evolve in battle when held."}
-{"id":"scolipite","name":"Scolipite","category":"mega-items","cost":10000,"pokemon":"scolipede","megaForm":"scolipede-mega","description":"Allows Scolipede to Mega Evolve in battle when held."}
-{"id":"scovillainite","name":"Scovillainite","category":"mega-items","cost":10000,"pokemon":"scovillain","megaForm":"scovillain-mega","description":"Allows Scovillain to Mega Evolve in battle when held."}
-{"id":"scraftinite","name":"Scraftinite","category":"mega-items","cost":10000,"pokemon":"scrafty","megaForm":"scrafty-mega","description":"Allows Scrafty to Mega Evolve in battle when held."}
-{"id":"sharpedonite","name":"Sharpedonite","category":"mega-items","cost":10000,"pokemon":"sharpedo","megaForm":"sharpedo-mega","description":"Allows Sharpedo to Mega Evolve in battle when held."}
-{"id":"skarmorite","name":"Skarmorite","category":"mega-items","cost":10000,"pokemon":"skarmory","megaForm":"skarmory-mega","description":"Allows Skarmory to Mega Evolve in battle when held."}
-{"id":"slowbronite","name":"Slowbronite","category":"mega-items","cost":10000,"pokemon":"slowbro","megaForm":"slowbro-mega","description":"Allows Slowbro to Mega Evolve in battle when held."}
-{"id":"staraptite","name":"Staraptite","category":"mega-items","cost":10000,"pokemon":"staraptor","megaForm":"staraptor-mega","description":"Allows Staraptor to Mega Evolve in battle when held."}
-{"id":"starminite","name":"Starminite","category":"mega-items","cost":10000,"pokemon":"starmie","megaForm":"starmie-mega","description":"Allows Starmie to Mega Evolve in battle when held."}
-{"id":"steelixite","name":"Steelixite","category":"mega-items","cost":10000,"pokemon":"steelix","megaForm":"steelix-mega","description":"Allows Steelix to Mega Evolve in battle when held."}
-{"id":"swampertite","name":"Swampertite","category":"mega-items","cost":10000,"pokemon":"swampert","megaForm":"swampert-mega","description":"Allows Swampert to Mega Evolve in battle when held."}
-{"id":"tatsugirinite","name":"Tatsugirinite","category":"mega-items","cost":10000,"pokemon":"tatsugiri","megaForm":"tatsugiri-mega","description":"Allows Tatsugiri to Mega Evolve in battle when held."}
-{"id":"tyranitarite","name":"Tyranitarite","category":"mega-items","cost":10000,"pokemon":"tyranitar","megaForm":"tyranitar-mega","description":"Allows Tyranitar to Mega Evolve in battle when held."}
-{"id":"venusaurite","name":"Venusaurite","category":"mega-items","cost":10000,"pokemon":"venusaur","megaForm":"venusaur-mega","description":"Allows Venusaur to Mega Evolve in battle when held."}
-{"id":"victreebelite","name":"Victreebelite","category":"mega-items","cost":10000,"pokemon":"victreebel","megaForm":"victreebel-mega","description":"Allows Victreebel to Mega Evolve in battle when held."}
-{"id":"zeraorite","name":"Zeraorite","category":"mega-items","cost":15000,"pokemon":"zeraora","megaForm":"zeraora-mega","description":"Allows Zeraora to Mega Evolve in battle when held."}
-{"id":"zygardite","name":"Zygardite","category":"mega-items","cost":15000,"pokemon":"zygarde","megaForm":"zygarde-complete-mega","description":"Allows Zygarde Complete Forme to Mega Evolve in battle when held."}
-{"id":"tm01","name":"TM01","category":"tms","cost":3000,"move":"mega-punch","moveName":"Mega Punch","type":"normal"}
-{"id":"tm02","name":"TM02","category":"tms","cost":2000,"move":"razor-wind","moveName":"Razor Wind","type":"normal"}
-{"id":"tm03","name":"TM03","category":"tms","cost":3000,"move":"swords-dance","moveName":"Swords Dance","type":"normal"}
-{"id":"tm04","name":"TM04","category":"tms","cost":1500,"move":"whirlwind","moveName":"Whirlwind","type":"normal"}
-{"id":"tm05","name":"TM05","category":"tms","cost":3000,"move":"mega-kick","moveName":"Mega Kick","type":"normal"}
-{"id":"tm06","name":"TM06","category":"tms","cost":4000,"move":"toxic","moveName":"Toxic","type":"poison"}
-{"id":"tm07","name":"TM07","category":"tms","cost":5000,"move":"horn-drill","moveName":"Horn Drill","type":"normal"}
-{"id":"tm08","name":"TM08","category":"tms","cost":4000,"move":"body-slam","moveName":"Body Slam","type":"normal"}
-{"id":"tm09","name":"TM09","category":"tms","cost":3000,"move":"take-down","moveName":"Take Down","type":"normal"}
-{"id":"tm10","name":"TM10","category":"tms","cost":4000,"move":"double-edge","moveName":"Double-Edge","type":"normal"}
-{"id":"tm11","name":"TM11","category":"tms","cost":3000,"move":"bubble-beam","moveName":"Bubble Beam","type":"water"}
-{"id":"tm12","name":"TM12","category":"tms","cost":2000,"move":"water-gun","moveName":"Water Gun","type":"water"}
-{"id":"tm13","name":"TM13","category":"tms","cost":5000,"move":"ice-beam","moveName":"Ice Beam","type":"ice"}
-{"id":"tm14","name":"TM14","category":"tms","cost":8000,"move":"blizzard","moveName":"Blizzard","type":"ice"}
-{"id":"tm15","name":"TM15","category":"tms","cost":10000,"move":"hyper-beam","moveName":"Hyper Beam","type":"normal"}
-{"id":"tm16","name":"TM16","category":"tms","cost":3000,"move":"pay-day","moveName":"Pay Day","type":"normal"}
-{"id":"tm17","name":"TM17","category":"tms","cost":3000,"move":"submission","moveName":"Submission","type":"fighting"}
-{"id":"tm18","name":"TM18","category":"tms","cost":3000,"move":"counter","moveName":"Counter","type":"fighting"}
-{"id":"tm19","name":"TM19","category":"tms","cost":3000,"move":"seismic-toss","moveName":"Seismic Toss","type":"fighting"}
-{"id":"tm20","name":"TM20","category":"tms","cost":2000,"move":"rage","moveName":"Rage","type":"normal"}
-{"id":"tm21","name":"TM21","category":"tms","cost":3000,"move":"mega-drain","moveName":"Mega Drain","type":"grass"}
-{"id":"tm22","name":"TM22","category":"tms","cost":5000,"move":"solar-beam","moveName":"Solar Beam","type":"grass"}
-{"id":"tm23","name":"TM23","category":"tms","cost":4000,"move":"dragon-rage","moveName":"Dragon Rage","type":"dragon"}
-{"id":"tm24","name":"TM24","category":"tms","cost":5000,"move":"thunderbolt","moveName":"Thunderbolt","type":"electric"}
-{"id":"tm25","name":"TM25","category":"tms","cost":8000,"move":"thunder","moveName":"Thunder","type":"electric"}
-{"id":"tm26","name":"TM26","category":"tms","cost":6000,"move":"earthquake","moveName":"Earthquake","type":"ground"}
-{"id":"tm27","name":"TM27","category":"tms","cost":8000,"move":"fissure","moveName":"Fissure","type":"ground"}
-{"id":"tm28","name":"TM28","category":"tms","cost":3000,"move":"dig","moveName":"Dig","type":"ground"}
-{"id":"tm29","name":"TM29","category":"tms","cost":6000,"move":"psychic","moveName":"Psychic","type":"psychic"}
-{"id":"tm30","name":"TM30","category":"tms","cost":1000,"move":"teleport","moveName":"Teleport","type":"psychic"}
-{"id":"tm31","name":"TM31","category":"tms","cost":2000,"move":"mimic","moveName":"Mimic","type":"normal"}
-{"id":"tm32","name":"TM32","category":"tms","cost":2000,"move":"double-team","moveName":"Double Team","type":"normal"}
-{"id":"tm33","name":"TM33","category":"tms","cost":3000,"move":"reflect","moveName":"Reflect","type":"psychic"}
-{"id":"tm34","name":"TM34","category":"tms","cost":2000,"move":"bide","moveName":"Bide","type":"normal"}
-{"id":"tm35","name":"TM35","category":"tms","cost":4000,"move":"metronome","moveName":"Metronome","type":"normal"}
-{"id":"tm36","name":"TM36","category":"tms","cost":5000,"move":"self-destruct","moveName":"Self-Destruct","type":"normal"}
-{"id":"tm37","name":"TM37","category":"tms","cost":3000,"move":"egg-bomb","moveName":"Egg Bomb","type":"normal"}
-{"id":"tm38","name":"TM38","category":"tms","cost":8000,"move":"fire-blast","moveName":"Fire Blast","type":"fire"}
-{"id":"tm39","name":"TM39","category":"tms","cost":3000,"move":"swift","moveName":"Swift","type":"normal"}
-{"id":"tm40","name":"TM40","category":"tms","cost":4000,"move":"skull-bash","moveName":"Skull Bash","type":"normal"}
-{"id":"tm41","name":"TM41","category":"tms","cost":4000,"move":"soft-boiled","moveName":"Soft-Boiled","type":"normal"}
-{"id":"tm42","name":"TM42","category":"tms","cost":5000,"move":"dream-eater","moveName":"Dream Eater","type":"psychic"}
-{"id":"tm43","name":"TM43","category":"tms","cost":6000,"move":"sky-attack","moveName":"Sky Attack","type":"flying"}
-{"id":"tm44","name":"TM44","category":"tms","cost":3000,"move":"rest","moveName":"Rest","type":"psychic"}
-{"id":"tm45","name":"TM45","category":"tms","cost":3000,"move":"thunder-wave","moveName":"Thunder Wave","type":"electric"}
-{"id":"tm46","name":"TM46","category":"tms","cost":3000,"move":"psywave","moveName":"Psywave","type":"psychic"}
-{"id":"tm47","name":"TM47","category":"tms","cost":8000,"move":"explosion","moveName":"Explosion","type":"normal"}
-{"id":"tm48","name":"TM48","category":"tms","cost":5000,"move":"rock-slide","moveName":"Rock Slide","type":"rock"}
-{"id":"tm49","name":"TM49","category":"tms","cost":4000,"move":"tri-attack","moveName":"Tri Attack","type":"normal"}
-{"id":"tm50","name":"TM50","category":"tms","cost":5000,"move":"substitute","moveName":"Substitute","type":"normal"}
-{"id":"great-ball","name":"Great Ball","category":"pokeballs","cost":1000,"catchPower":15}
-{"id":"ultra-ball","name":"Ultra Ball","category":"pokeballs","cost":2000,"catchPower":35}
-{"id":"master-ball","name":"Master Ball","category":"pokeballs","cost":100000,"catchPower":100}
-{"id":"revive","name":"Revive","category":"recovery","cost":300,"effect":{"type":"revive","percent":0.50}}
-{"id":"max-revive","name":"Max Revive","category":"recovery","cost":1000,"effect":{"type":"revive","percent":1.00}}
-{"id":"potion","name":"Potion","category":"recovery","cost":100,"effect":{"type":"heal","amount":20}}
-{"id":"super-potion","name":"Super Potion","category":"recovery","cost":400,"effect":{"type":"heal","amount":55}}
-{"id":"hyper-potion","name":"Hyper Potion","category":"recovery","cost":1000,"effect":{"type":"heal","amount":150}}
-{"id":"max-potion","name":"Max Potion","category":"recovery","cost":2000,"effect":{"type":"heal","amount":1000}}
-{"id":"antidote","name":"Antidote","category":"status-recovery","cost":100,"effect":{"type":"status-heal","status":"poison"}}
-{"id":"burn-heal","name":"Burn Heal","category":"status-recovery","cost":250,"effect":{"type":"status-heal","status":"burn"}}
-{"id":"ice-heal","name":"Ice Heal","category":"status-recovery","cost":250,"effect":{"type":"status-heal","status":"freeze"}}
-{"id":"awakening","name":"Awakening","category":"status-recovery","cost":250,"effect":{"type":"status-heal","status":"sleep"}}
-{"id":"paralyze-heal","name":"Paralyze Heal","category":"status-recovery","cost":200,"effect":{"type":"status-heal","status":"paralysis"}}
-{"id":"ether","name":"Ether","category":"pp-recovery","cost":1200,"effect":{"type":"pp-heal","scope":"single","amount":10}}
-{"id":"max-ether","name":"Max Ether","category":"pp-recovery","cost":2000,"effect":{"type":"pp-heal","scope":"single","amount":1000}}
-{"id":"elixir","name":"Elixir","category":"pp-recovery","cost":3000,"effect":{"type":"pp-heal","scope":"all","amount":10}}
-{"id":"max-elixir","name":"Max Elixir","category":"pp-recovery","cost":4500,"effect":{"type":"pp-heal","scope":"all","amount":1000}}
-{"id":"pp-up","name":"PP Up","category":"stat-boosters","cost":9800,"effect":{"type":"pp-max-raise","scope":"single","stages":1}}
-{"id":"pp-max","name":"PP Max","category":"stat-boosters","cost":9800,"effect":{"type":"pp-max-raise","scope":"single","stages":3}}
+{
+  "_id": "fire-stone",
+  "_t": "EvolutionItem",
+  "name": "Fire Stone",
+  "category": "evolution-stones",
+  "cost": 3000,
+  "description": "A peculiar stone that can make certain species of Pokémon evolve. It has a fiery orange heart."
+}
+{"_id":"water-stone","_t":"EvolutionItem","name":"Water Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It is a clear, light blue."}
+{"_id":"thunder-stone","_t":"EvolutionItem","name":"Thunder Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It has a distinct thunderbolt pattern."}
+{"_id":"leaf-stone","_t":"EvolutionItem","name":"Leaf Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable leaf pattern."}
+{"_id":"moon-stone","_t":"EvolutionItem","name":"Moon Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It is as black as the night sky."}
+{"_id":"sun-stone","_t":"EvolutionItem","name":"Sun Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It burns red like the evening sun."}
+{"_id":"shiny-stone","_t":"EvolutionItem","name":"Shiny Stone","category":"evolution-stones","cost":4500,"description":"A peculiar stone that can make certain species of Pokémon evolve. It shines with a dazzling light."}
+{"_id":"dusk-stone","_t":"EvolutionItem","name":"Dusk Stone","category":"evolution-stones","cost":4500,"description":"A peculiar stone that can make certain species of Pokémon evolve. It holds a dark shadow."}
+{"_id":"dawn-stone","_t":"EvolutionItem","name":"Dawn Stone","category":"evolution-stones","cost":4500,"description":"A peculiar stone that can make certain species of Pokémon evolve. It sparkles like a glittering eye."}
+{"_id":"ice-stone","_t":"EvolutionItem","name":"Ice Stone","category":"evolution-stones","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It has a snowflake pattern."}
+{"_id":"kings-rock","_t":"EvolutionItem","name":"King's Rock","category":"held-items","cost":4500,"description":"An item to be held by a Pokémon. When held, it may cause the target to flinch upon taking damage."}
+{"_id":"metal-coat","_t":"EvolutionItem","name":"Metal Coat","category":"held-items","cost":4500,"description":"An item to be held by a Pokémon. It is a special metallic film that boosts Steel-type moves."}
+{"_id":"dragon-scale","_t":"EvolutionItem","name":"Dragon Scale","category":"held-items","cost":4500,"description":"A thick, tough scale. Dragon-type Pokémon may be holding it."}
+{"_id":"up-grade","_t":"EvolutionItem","name":"Upgrade","category":"held-items","cost":5000,"description":"A transparent device filled with all sorts of data. It was produced by Silph Co."}
+{"_id":"dubious-disc","_t":"EvolutionItem","name":"Dubious Disc","category":"held-items","cost":5000,"description":"A transparent device overflowing with dubious data. Its producer is unknown."}
+{"_id":"protector","_t":"EvolutionItem","name":"Protector","category":"held-items","cost":4500,"description":"A protective item. It is extremely stiff and heavy."}
+{"_id":"electirizer","_t":"EvolutionItem","name":"Electirizer","category":"held-items","cost":5000,"description":"A box packed with a tremendous amount of electric energy."}
+{"_id":"magmarizer","_t":"EvolutionItem","name":"Magmarizer","category":"held-items","cost":5000,"description":"A box packed with a tremendous amount of magma energy."}
+{"_id":"reaper-cloth","_t":"EvolutionItem","name":"Reaper Cloth","category":"held-items","cost":4500,"description":"A cloth imbued with terrible spiritual energy."}
+{"_id":"deep-sea-tooth","_t":"EvolutionItem","name":"Deep Sea Tooth","category":"held-items","cost":4000,"description":"A tooth that glints a sharp silver. It raises Special Attack when held by Clamperl."}
+{"_id":"deep-sea-scale","_t":"EvolutionItem","name":"Deep Sea Scale","category":"held-items","cost":4000,"description":"A scale that shines a faint pink. It raises Special Defense when held by Clamperl."}
+{"_id":"prism-scale","_t":"EvolutionItem","name":"Prism Scale","category":"held-items","cost":4500,"description":"A mysterious scale that shines in rainbow colors. It causes certain Pokémon to evolve."}
+{"_id":"oval-stone","_t":"EvolutionItem","name":"Oval Stone","category":"held-items","cost":3000,"description":"A peculiar stone that can make certain species of Pokémon evolve. It's shaped like an egg."}
+{"_id":"sachet","_t":"EvolutionItem","name":"Sachet","category":"held-items","cost":4000,"description":"A sachet filled with fragrant sachet powder that exhales a faint perfume."}
+{"_id":"whipped-dream","_t":"EvolutionItem","name":"Whipped Dream","category":"held-items","cost":4000,"description":"A soft and sweet treat made of fluffy whipped cream."}
+{"_id":"razor-claw","_t":"EvolutionItem","name":"Razor Claw","category":"held-items","cost":4500,"description":"An item to be held by a Pokémon. It is a sharply hooked claw that boosts critical-hit ratio."}
+{"_id":"razor-fang","_t":"EvolutionItem","name":"Razor Fang","category":"held-items","cost":4500,"description":"An item to be held by a Pokémon. It may cause the target to flinch on attack."}
+{"_id":"sweet-apple","_t":"EvolutionItem","name":"Sweet Apple","category":"evolution","cost":3500,"description":"A peculiar apple that can make a certain species of Pokémon evolve. It is exceptionally sweet."}
+{"_id":"tart-apple","_t":"EvolutionItem","name":"Tart Apple","category":"evolution","cost":3500,"description":"A peculiar apple that can make a certain species of Pokémon evolve. It is exceptionally tart."}
+{"_id":"syrupy-apple","_t":"EvolutionItem","name":"Syrupy Apple","category":"evolution","cost":3500,"description":"A peculiar apple that can make a certain species of Pokémon evolve. It is covered in sweet syrup."}
+{"_id":"chipped-pot","_t":"EvolutionItem","name":"Chipped Pot","category":"evolution","cost":4000,"description":"A peculiar teapot that can make a certain species of Pokémon evolve. It has a chip on it."}
+{"_id":"cracked-pot","_t":"EvolutionItem","name":"Cracked Pot","category":"evolution","cost":4000,"description":"A peculiar teapot that can make a certain species of Pokémon evolve. It has a crack in it."}
+{"_id":"unremarkable-teacup","_t":"EvolutionItem","name":"Unremarkable Teacup","category":"evolution","cost":4000,"description":"A peculiar teacup that can make a certain species of Pokémon evolve. It is quite plain."}
+{"_id":"masterpiece-teacup","_t":"EvolutionItem","name":"Masterpiece Teacup","category":"evolution","cost":5000,"description":"A peculiar teacup that can make a certain species of Pokémon evolve. It is a masterpiece."}
+{"_id":"galarica-cuff","_t":"EvolutionItem","name":"Galarica Cuff","category":"evolution","cost":4500,"description":"A cuff made from woven Galarica Twigs that can make a Galarian Slowpoke evolve."}
+{"_id":"galarica-wreath","_t":"EvolutionItem","name":"Galarica Wreath","category":"evolution","cost":4500,"description":"A wreath made from woven Galarica Twigs that can make a Galarian Slowpoke evolve."}
+{"_id":"black-augurite","_t":"EvolutionItem","name":"Black Augurite","category":"evolution","cost":5000,"description":"A glass-like black stone that can make a certain species of Pokémon evolve."}
+{"_id":"peat-block","_t":"EvolutionItem","name":"Peat Block","category":"evolution","cost":5000,"description":"A block of muddy peat that can make Ursaring evolve during a full moon."}
+{"_id":"auspicious-armor","_t":"EvolutionItem","name":"Auspicious Armor","category":"evolution","cost":5500,"description":"A peculiar suit of armor that can make Charcadet evolve into Armarouge."}
+{"_id":"malicious-armor","_t":"EvolutionItem","name":"Malicious Armor","category":"evolution","cost":5500,"description":"A peculiar suit of armor that can make Charcadet evolve into Ceruledge."}
+{"_id":"scroll-of-darkness","_t":"EvolutionItem","name":"Scroll of Darkness","category":"evolution","cost":6000,"description":"A secret scroll that can make Kubfu evolve into Single Strike Style Urshifu."}
+{"_id":"scroll-of-waters","_t":"EvolutionItem","name":"Scroll of Waters","category":"evolution","cost":6000,"description":"A secret scroll that can make Kubfu evolve into Rapid Strike Style Urshifu."}
+{"_id":"abomasite","_t":"MegaEvolutionItem","name":"Abomasite","category":"mega-items","cost":10000,"pokemon":"abomasnow","megaForm":"abomasnow-mega","description":"Allows Abomasnow to Mega Evolve in battle when held."}
+{"_id":"absolite","_t":"MegaEvolutionItem","name":"Absolite","category":"mega-items","cost":10000,"pokemon":"absol","megaForm":"absol-mega","description":"Allows Absol to Mega Evolve in battle when held."}
+{"_id":"absolite-z","_t":"MegaEvolutionItem","name":"Absolite Z","category":"mega-items","cost":12000,"pokemon":"absol","megaForm":"absol-mega-z","description":"Allows Absol to Mega Evolve into Mega Absol Z in battle when held."}
+{"_id":"aerodactylite","_t":"MegaEvolutionItem","name":"Aerodactylite","category":"mega-items","cost":10000,"pokemon":"aerodactyl","megaForm":"aerodactyl-mega","description":"Allows Aerodactyl to Mega Evolve in battle when held."}
+{"_id":"aggronite","_t":"MegaEvolutionItem","name":"Aggronite","category":"mega-items","cost":10000,"pokemon":"aggron","megaForm":"aggron-mega","description":"Allows Aggron to Mega Evolve in battle when held."}
+{"_id":"alakazamite","_t":"MegaEvolutionItem","name":"Alakazamite","category":"mega-items","cost":10000,"pokemon":"alakazam","megaForm":"alakazam-mega","description":"Allows Alakazam to Mega Evolve in battle when held."}
+{"_id":"altarianite","_t":"MegaEvolutionItem","name":"Altarianite","category":"mega-items","cost":10000,"pokemon":"altaria","megaForm":"altaria-mega","description":"Allows Altaria to Mega Evolve in battle when held."}
+{"_id":"ampharosite","_t":"MegaEvolutionItem","name":"Ampharosite","category":"mega-items","cost":10000,"pokemon":"ampharos","megaForm":"ampharos-mega","description":"Allows Ampharos to Mega Evolve in battle when held."}
+{"_id":"audinite","_t":"MegaEvolutionItem","name":"Audinite","category":"mega-items","cost":10000,"pokemon":"audino","megaForm":"audino-mega","description":"Allows Audino to Mega Evolve in battle when held."}
+{"_id":"banettite","_t":"MegaEvolutionItem","name":"Banettite","category":"mega-items","cost":10000,"pokemon":"banette","megaForm":"banette-mega","description":"Allows Banette to Mega Evolve in battle when held."}
+{"_id":"barbaracite","_t":"MegaEvolutionItem","name":"Barbaracite","category":"mega-items","cost":10000,"pokemon":"barbaracle","megaForm":"barbaracle-mega","description":"Allows Barbaracle to Mega Evolve in battle when held."}
+{"_id":"baxcalibrite","_t":"MegaEvolutionItem","name":"Baxcalibrite","category":"mega-items","cost":12000,"pokemon":"baxcalibur","megaForm":"baxcalibur-mega","description":"Allows Baxcalibur to Mega Evolve in battle when held."}
+{"_id":"beedrillite","_t":"MegaEvolutionItem","name":"Beedrillite","category":"mega-items","cost":10000,"pokemon":"beedrill","megaForm":"beedrill-mega","description":"Allows Beedrill to Mega Evolve in battle when held."}
+{"_id":"blastoisinite","_t":"MegaEvolutionItem","name":"Blastoisinite","category":"mega-items","cost":10000,"pokemon":"blastoise","megaForm":"blastoise-mega","description":"Allows Blastoise to Mega Evolve in battle when held."}
+{"_id":"blazikenite","_t":"MegaEvolutionItem","name":"Blazikenite","category":"mega-items","cost":10000,"pokemon":"blaziken","megaForm":"blaziken-mega","description":"Allows Blaziken to Mega Evolve in battle when held."}
+{"_id":"cameruptite","_t":"MegaEvolutionItem","name":"Cameruptite","category":"mega-items","cost":10000,"pokemon":"camerupt","megaForm":"camerupt-mega","description":"Allows Camerupt to Mega Evolve in battle when held."}
+{"_id":"chandelurite","_t":"MegaEvolutionItem","name":"Chandelurite","category":"mega-items","cost":10000,"pokemon":"chandelure","megaForm":"chandelure-mega","description":"Allows Chandelure to Mega Evolve in battle when held."}
+{"_id":"charizardite-x","_t":"MegaEvolutionItem","name":"Charizardite X","category":"mega-items","cost":10000,"pokemon":"charizard","megaForm":"charizard-mega-x","description":"Allows Charizard to Mega Evolve into Mega Charizard X in battle when held."}
+{"_id":"charizardite-y","_t":"MegaEvolutionItem","name":"Charizardite Y","category":"mega-items","cost":10000,"pokemon":"charizard","megaForm":"charizard-mega-y","description":"Allows Charizard to Mega Evolve into Mega Charizard Y in battle when held."}
+{"_id":"chesnaughtite","_t":"MegaEvolutionItem","name":"Chesnaughtite","category":"mega-items","cost":10000,"pokemon":"chesnaught","megaForm":"chesnaught-mega","description":"Allows Chesnaught to Mega Evolve in battle when held."}
+{"_id":"chimechite","_t":"MegaEvolutionItem","name":"Chimechite","category":"mega-items","cost":10000,"pokemon":"chimecho","megaForm":"chimecho-mega","description":"Allows Chimecho to Mega Evolve in battle when held."}
+{"_id":"clefablite","_t":"MegaEvolutionItem","name":"Clefablite","category":"mega-items","cost":10000,"pokemon":"clefable","megaForm":"clefable-mega","description":"Allows Clefable to Mega Evolve in battle when held."}
+{"_id":"crabominite","_t":"MegaEvolutionItem","name":"Crabominite","category":"mega-items","cost":10000,"pokemon":"crabominable","megaForm":"crabominable-mega","description":"Allows Crabominable to Mega Evolve in battle when held."}
+{"_id":"darkranite","_t":"MegaEvolutionItem","name":"Darkranite","category":"mega-items","cost":15000,"pokemon":"darkrai","megaForm":"darkrai-mega","description":"Allows Darkrai to Mega Evolve in battle when held."}
+{"_id":"delphoxite","_t":"MegaEvolutionItem","name":"Delphoxite","category":"mega-items","cost":10000,"pokemon":"delphox","megaForm":"delphox-mega","description":"Allows Delphox to Mega Evolve in battle when held."}
+{"_id":"diancite","_t":"MegaEvolutionItem","name":"Diancite","category":"mega-items","cost":10000,"pokemon":"diancie","megaForm":"diancie-mega","description":"Allows Diancie to Mega Evolve in battle when held."}
+{"_id":"dragalgite","_t":"MegaEvolutionItem","name":"Dragalgite","category":"mega-items","cost":10000,"pokemon":"dragalge","megaForm":"dragalge-mega","description":"Allows Dragalge to Mega Evolve in battle when held."}
+{"_id":"dragoninite","_t":"MegaEvolutionItem","name":"Dragoninite","category":"mega-items","cost":12000,"pokemon":"dragonite","megaForm":"dragonite-mega","description":"Allows Dragonite to Mega Evolve in battle when held."}
+{"_id":"drampanite","_t":"MegaEvolutionItem","name":"Drampanite","category":"mega-items","cost":10000,"pokemon":"drampa","megaForm":"drampa-mega","description":"Allows Drampa to Mega Evolve in battle when held."}
+{"_id":"eelektrossite","_t":"MegaEvolutionItem","name":"Eelektrossite","category":"mega-items","cost":10000,"pokemon":"eelektross","megaForm":"eelektross-mega","description":"Allows Eelektross to Mega Evolve in battle when held."}
+{"_id":"emboarite","_t":"MegaEvolutionItem","name":"Emboarite","category":"mega-items","cost":10000,"pokemon":"emboar","megaForm":"emboar-mega","description":"Allows Emboar to Mega Evolve in battle when held."}
+{"_id":"excadrite","_t":"MegaEvolutionItem","name":"Excadrite","category":"mega-items","cost":10000,"pokemon":"excadrill","megaForm":"excadrill-mega","description":"Allows Excadrill to Mega Evolve in battle when held."}
+{"_id":"falinksite","_t":"MegaEvolutionItem","name":"Falinksite","category":"mega-items","cost":10000,"pokemon":"falinks","megaForm":"falinks-mega","description":"Allows Falinks to Mega Evolve in battle when held."}
+{"_id":"feraligite","_t":"MegaEvolutionItem","name":"Feraligite","category":"mega-items","cost":10000,"pokemon":"feraligatr","megaForm":"feraligatr-mega","description":"Allows Feraligatr to Mega Evolve in battle when held."}
+{"_id":"floettite","_t":"MegaEvolutionItem","name":"Floettite","category":"mega-items","cost":10000,"pokemon":"floette","megaForm":"floette-eternal-mega","description":"Allows Eternal Flower Floette to Mega Evolve in battle when held."}
+{"_id":"froslassite","_t":"MegaEvolutionItem","name":"Froslassite","category":"mega-items","cost":10000,"pokemon":"froslass","megaForm":"froslass-mega","description":"Allows Froslass to Mega Evolve in battle when held."}
+{"_id":"galladite","_t":"MegaEvolutionItem","name":"Galladite","category":"mega-items","cost":10000,"pokemon":"gallade","megaForm":"gallade-mega","description":"Allows Gallade to Mega Evolve in battle when held."}
+{"_id":"garchompite","_t":"MegaEvolutionItem","name":"Garchompite","category":"mega-items","cost":10000,"pokemon":"garchomp","megaForm":"garchomp-mega","description":"Allows Garchomp to Mega Evolve in battle when held."}
+{"_id":"garchompite-z","_t":"MegaEvolutionItem","name":"Garchompite Z","category":"mega-items","cost":12000,"pokemon":"garchomp","megaForm":"garchomp-mega-z","description":"Allows Garchomp to Mega Evolve into Mega Garchomp Z in battle when held."}
+{"_id":"gardevoirite","_t":"MegaEvolutionItem","name":"Gardevoirite","category":"mega-items","cost":10000,"pokemon":"gardevoir","megaForm":"gardevoir-mega","description":"Allows Gardevoir to Mega Evolve in battle when held."}
+{"_id":"gengarite","_t":"MegaEvolutionItem","name":"Gengarite","category":"mega-items","cost":10000,"pokemon":"gengar","megaForm":"gengar-mega","description":"Allows Gengar to Mega Evolve in battle when held."}
+{"_id":"glalitite","_t":"MegaEvolutionItem","name":"Glalitite","category":"mega-items","cost":10000,"pokemon":"glalie","megaForm":"glalie-mega","description":"Allows Glalie to Mega Evolve in battle when held."}
+{"_id":"glimmoranite","_t":"MegaEvolutionItem","name":"Glimmoranite","category":"mega-items","cost":10000,"pokemon":"glimmora","megaForm":"glimmora-mega","description":"Allows Glimmora to Mega Evolve in battle when held."}
+{"_id":"golisopite","_t":"MegaEvolutionItem","name":"Golisopite","category":"mega-items","cost":10000,"pokemon":"golisopod","megaForm":"golisopod-mega","description":"Allows Golisopod to Mega Evolve in battle when held."}
+{"_id":"golurkite","_t":"MegaEvolutionItem","name":"Golurkite","category":"mega-items","cost":10000,"pokemon":"golurk","megaForm":"golurk-mega","description":"Allows Golurk to Mega Evolve in battle when held."}
+{"_id":"greninjite","_t":"MegaEvolutionItem","name":"Greninjite","category":"mega-items","cost":10000,"pokemon":"greninja","megaForm":"greninja-mega","description":"Allows Greninja to Mega Evolve in battle when held."}
+{"_id":"gyaradosite","_t":"MegaEvolutionItem","name":"Gyaradosite","category":"mega-items","cost":10000,"pokemon":"gyarados","megaForm":"gyarados-mega","description":"Allows Gyarados to Mega Evolve in battle when held."}
+{"_id":"hawluchanite","_t":"MegaEvolutionItem","name":"Hawluchanite","category":"mega-items","cost":10000,"pokemon":"hawlucha","megaForm":"hawlucha-mega","description":"Allows Hawlucha to Mega Evolve in battle when held."}
+{"_id":"heatranite","_t":"MegaEvolutionItem","name":"Heatranite","category":"mega-items","cost":15000,"pokemon":"heatran","megaForm":"heatran-mega","description":"Allows Heatran to Mega Evolve in battle when held."}
+{"_id":"heracronite","_t":"MegaEvolutionItem","name":"Heracronite","category":"mega-items","cost":10000,"pokemon":"heracross","megaForm":"heracross-mega","description":"Allows Heracross to Mega Evolve in battle when held."}
+{"_id":"houndoominite","_t":"MegaEvolutionItem","name":"Houndoominite","category":"mega-items","cost":10000,"pokemon":"houndoom","megaForm":"houndoom-mega","description":"Allows Houndoom to Mega Evolve in battle when held."}
+{"_id":"kangaskhanite","_t":"MegaEvolutionItem","name":"Kangaskhanite","category":"mega-items","cost":10000,"pokemon":"kangaskhan","megaForm":"kangaskhan-mega","description":"Allows Kangaskhan to Mega Evolve in battle when held."}
+{"_id":"latiasite","_t":"MegaEvolutionItem","name":"Latiasite","category":"mega-items","cost":10000,"pokemon":"latias","megaForm":"latias-mega","description":"Allows Latias to Mega Evolve in battle when held."}
+{"_id":"latiosite","_t":"MegaEvolutionItem","name":"Latiosite","category":"mega-items","cost":10000,"pokemon":"latios","megaForm":"latios-mega","description":"Allows Latios to Mega Evolve in battle when held."}
+{"_id":"lopunnite","_t":"MegaEvolutionItem","name":"Lopunnite","category":"mega-items","cost":10000,"pokemon":"lopunny","megaForm":"lopunny-mega","description":"Allows Lopunny to Mega Evolve in battle when held."}
+{"_id":"lucarionite","_t":"MegaEvolutionItem","name":"Lucarionite","category":"mega-items","cost":10000,"pokemon":"lucario","megaForm":"lucario-mega","description":"Allows Lucario to Mega Evolve in battle when held."}
+{"_id":"lucarionite-z","_t":"MegaEvolutionItem","name":"Lucarionite Z","category":"mega-items","cost":12000,"pokemon":"lucario","megaForm":"lucario-mega-z","description":"Allows Lucario to Mega Evolve into Mega Lucario Z in battle when held."}
+{"_id":"magearnite","_t":"MegaEvolutionItem","name":"Magearnite","category":"mega-items","cost":15000,"pokemon":"magearna","megaForm":"magearna-mega","description":"Allows Magearna to Mega Evolve in battle when held."}
+{"_id":"malamarite","_t":"MegaEvolutionItem","name":"Malamarite","category":"mega-items","cost":10000,"pokemon":"malamar","megaForm":"malamar-mega","description":"Allows Malamar to Mega Evolve in battle when held."}
+{"_id":"manectite","_t":"MegaEvolutionItem","name":"Manectite","category":"mega-items","cost":10000,"pokemon":"manectric","megaForm":"manectric-mega","description":"Allows Manectric to Mega Evolve in battle when held."}
+{"_id":"mawilite","_t":"MegaEvolutionItem","name":"Mawilite","category":"mega-items","cost":10000,"pokemon":"mawile","megaForm":"mawile-mega","description":"Allows Mawile to Mega Evolve in battle when held."}
+{"_id":"medichamite","_t":"MegaEvolutionItem","name":"Medichamite","category":"mega-items","cost":10000,"pokemon":"medicham","megaForm":"medicham-mega","description":"Allows Medicham to Mega Evolve in battle when held."}
+{"_id":"meganiumite","_t":"MegaEvolutionItem","name":"Meganiumite","category":"mega-items","cost":10000,"pokemon":"meganium","megaForm":"meganium-mega","description":"Allows Meganium to Mega Evolve in battle when held."}
+{"_id":"meowsticite","_t":"MegaEvolutionItem","name":"Meowsticite","category":"mega-items","cost":10000,"pokemon":"meowstic","megaForm":"meowstic-mega","description":"Allows Meowstic to Mega Evolve in battle when held."}
+{"_id":"metagrossite","_t":"MegaEvolutionItem","name":"Metagrossite","category":"mega-items","cost":10000,"pokemon":"metagross","megaForm":"metagross-mega","description":"Allows Metagross to Mega Evolve in battle when held."}
+{"_id":"mewtwonite-x","_t":"MegaEvolutionItem","name":"Mewtwonite X","category":"mega-items","cost":10000,"pokemon":"mewtwo","megaForm":"mewtwo-mega-x","description":"Allows Mewtwo to Mega Evolve into Mega Mewtwo X in battle when held."}
+{"_id":"mewtwonite-y","_t":"MegaEvolutionItem","name":"Mewtwonite Y","category":"mega-items","cost":10000,"pokemon":"mewtwo","megaForm":"mewtwo-mega-y","description":"Allows Mewtwo to Mega Evolve into Mega Mewtwo Y in battle when held."}
+{"_id":"pidgeotite","_t":"MegaEvolutionItem","name":"Pidgeotite","category":"mega-items","cost":10000,"pokemon":"pidgeot","megaForm":"pidgeot-mega","description":"Allows Pidgeot to Mega Evolve in battle when held."}
+{"_id":"pinsirite","_t":"MegaEvolutionItem","name":"Pinsirite","category":"mega-items","cost":10000,"pokemon":"pinsir","megaForm":"pinsir-mega","description":"Allows Pinsir to Mega Evolve in battle when held."}
+{"_id":"pyroarite","_t":"MegaEvolutionItem","name":"Pyroarite","category":"mega-items","cost":10000,"pokemon":"pyroar","megaForm":"pyroar-mega","description":"Allows Pyroar to Mega Evolve in battle when held."}
+{"_id":"raichunite-x","_t":"MegaEvolutionItem","name":"Raichunite X","category":"mega-items","cost":10000,"pokemon":"raichu","megaForm":"raichu-mega-x","description":"Allows Raichu to Mega Evolve into Mega Raichu X in battle when held."}
+{"_id":"raichunite-y","_t":"MegaEvolutionItem","name":"Raichunite Y","category":"mega-items","cost":10000,"pokemon":"raichu","megaForm":"raichu-mega-y","description":"Allows Raichu to Mega Evolve into Mega Raichu Y in battle when held."}
+{"_id":"sablenite","_t":"MegaEvolutionItem","name":"Sablenite","category":"mega-items","cost":10000,"pokemon":"sableye","megaForm":"sableye-mega","description":"Allows Sableye to Mega Evolve in battle when held."}
+{"_id":"salamencite","_t":"MegaEvolutionItem","name":"Salamencite","category":"mega-items","cost":10000,"pokemon":"salamence","megaForm":"salamence-mega","description":"Allows Salamence to Mega Evolve in battle when held."}
+{"_id":"sceptilite","_t":"MegaEvolutionItem","name":"Sceptilite","category":"mega-items","cost":10000,"pokemon":"sceptile","megaForm":"sceptile-mega","description":"Allows Sceptile to Mega Evolve in battle when held."}
+{"_id":"scizorite","_t":"MegaEvolutionItem","name":"Scizorite","category":"mega-items","cost":10000,"pokemon":"scizor","megaForm":"scizor-mega","description":"Allows Scizor to Mega Evolve in battle when held."}
+{"_id":"scolipite","_t":"MegaEvolutionItem","name":"Scolipite","category":"mega-items","cost":10000,"pokemon":"scolipede","megaForm":"scolipede-mega","description":"Allows Scolipede to Mega Evolve in battle when held."}
+{"_id":"scovillainite","_t":"MegaEvolutionItem","name":"Scovillainite","category":"mega-items","cost":10000,"pokemon":"scovillain","megaForm":"scovillain-mega","description":"Allows Scovillain to Mega Evolve in battle when held."}
+{"_id":"scraftinite","_t":"MegaEvolutionItem","name":"Scraftinite","category":"mega-items","cost":10000,"pokemon":"scrafty","megaForm":"scrafty-mega","description":"Allows Scrafty to Mega Evolve in battle when held."}
+{"_id":"sharpedonite","_t":"MegaEvolutionItem","name":"Sharpedonite","category":"mega-items","cost":10000,"pokemon":"sharpedo","megaForm":"sharpedo-mega","description":"Allows Sharpedo to Mega Evolve in battle when held."}
+{"_id":"skarmorite","_t":"MegaEvolutionItem","name":"Skarmorite","category":"mega-items","cost":10000,"pokemon":"skarmory","megaForm":"skarmory-mega","description":"Allows Skarmory to Mega Evolve in battle when held."}
+{"_id":"slowbronite","_t":"MegaEvolutionItem","name":"Slowbronite","category":"mega-items","cost":10000,"pokemon":"slowbro","megaForm":"slowbro-mega","description":"Allows Slowbro to Mega Evolve in battle when held."}
+{"_id":"staraptite","_t":"MegaEvolutionItem","name":"Staraptite","category":"mega-items","cost":10000,"pokemon":"staraptor","megaForm":"staraptor-mega","description":"Allows Staraptor to Mega Evolve in battle when held."}
+{"_id":"starminite","_t":"MegaEvolutionItem","name":"Starminite","category":"mega-items","cost":10000,"pokemon":"starmie","megaForm":"starmie-mega","description":"Allows Starmie to Mega Evolve in battle when held."}
+{"_id":"steelixite","_t":"MegaEvolutionItem","name":"Steelixite","category":"mega-items","cost":10000,"pokemon":"steelix","megaForm":"steelix-mega","description":"Allows Steelix to Mega Evolve in battle when held."}
+{"_id":"swampertite","_t":"MegaEvolutionItem","name":"Swampertite","category":"mega-items","cost":10000,"pokemon":"swampert","megaForm":"swampert-mega","description":"Allows Swampert to Mega Evolve in battle when held."}
+{"_id":"tatsugirinite","_t":"MegaEvolutionItem","name":"Tatsugirinite","category":"mega-items","cost":10000,"pokemon":"tatsugiri","megaForm":"tatsugiri-mega","description":"Allows Tatsugiri to Mega Evolve in battle when held."}
+{"_id":"tyranitarite","_t":"MegaEvolutionItem","name":"Tyranitarite","category":"mega-items","cost":10000,"pokemon":"tyranitar","megaForm":"tyranitar-mega","description":"Allows Tyranitar to Mega Evolve in battle when held."}
+{"_id":"venusaurite","_t":"MegaEvolutionItem","name":"Venusaurite","category":"mega-items","cost":10000,"pokemon":"venusaur","megaForm":"venusaur-mega","description":"Allows Venusaur to Mega Evolve in battle when held."}
+{"_id":"victreebelite","_t":"MegaEvolutionItem","name":"Victreebelite","category":"mega-items","cost":10000,"pokemon":"victreebel","megaForm":"victreebel-mega","description":"Allows Victreebel to Mega Evolve in battle when held."}
+{"_id":"zeraorite","_t":"MegaEvolutionItem","name":"Zeraorite","category":"mega-items","cost":15000,"pokemon":"zeraora","megaForm":"zeraora-mega","description":"Allows Zeraora to Mega Evolve in battle when held."}
+{"_id":"zygardite","_t":"MegaEvolutionItem","name":"Zygardite","category":"mega-items","cost":15000,"pokemon":"zygarde","megaForm":"zygarde-complete-mega","description":"Allows Zygarde Complete Forme to Mega Evolve in battle when held."}
+{"_id":"tm01","_t":"TechnicalMachineItem","name":"TM01","category":"tms","cost":3000,"move":"mega-punch","moveName":"Mega Punch","type":"normal"}
+{"_id":"tm02","_t":"TechnicalMachineItem","name":"TM02","category":"tms","cost":2000,"move":"razor-wind","moveName":"Razor Wind","type":"normal"}
+{"_id":"tm03","_t":"TechnicalMachineItem","name":"TM03","category":"tms","cost":3000,"move":"swords-dance","moveName":"Swords Dance","type":"normal"}
+{"_id":"tm04","_t":"TechnicalMachineItem","name":"TM04","category":"tms","cost":1500,"move":"whirlwind","moveName":"Whirlwind","type":"normal"}
+{"_id":"tm05","_t":"TechnicalMachineItem","name":"TM05","category":"tms","cost":3000,"move":"mega-kick","moveName":"Mega Kick","type":"normal"}
+{"_id":"tm06","_t":"TechnicalMachineItem","name":"TM06","category":"tms","cost":4000,"move":"toxic","moveName":"Toxic","type":"poison"}
+{"_id":"tm07","_t":"TechnicalMachineItem","name":"TM07","category":"tms","cost":5000,"move":"horn-drill","moveName":"Horn Drill","type":"normal"}
+{"_id":"tm08","_t":"TechnicalMachineItem","name":"TM08","category":"tms","cost":4000,"move":"body-slam","moveName":"Body Slam","type":"normal"}
+{"_id":"tm09","_t":"TechnicalMachineItem","name":"TM09","category":"tms","cost":3000,"move":"take-down","moveName":"Take Down","type":"normal"}
+{"_id":"tm10","_t":"TechnicalMachineItem","name":"TM10","category":"tms","cost":4000,"move":"double-edge","moveName":"Double-Edge","type":"normal"}
+{"_id":"tm11","_t":"TechnicalMachineItem","name":"TM11","category":"tms","cost":3000,"move":"bubble-beam","moveName":"Bubble Beam","type":"water"}
+{"_id":"tm12","_t":"TechnicalMachineItem","name":"TM12","category":"tms","cost":2000,"move":"water-gun","moveName":"Water Gun","type":"water"}
+{"_id":"tm13","_t":"TechnicalMachineItem","name":"TM13","category":"tms","cost":5000,"move":"ice-beam","moveName":"Ice Beam","type":"ice"}
+{"_id":"tm14","_t":"TechnicalMachineItem","name":"TM14","category":"tms","cost":8000,"move":"blizzard","moveName":"Blizzard","type":"ice"}
+{"_id":"tm15","_t":"TechnicalMachineItem","name":"TM15","category":"tms","cost":10000,"move":"hyper-beam","moveName":"Hyper Beam","type":"normal"}
+{"_id":"tm16","_t":"TechnicalMachineItem","name":"TM16","category":"tms","cost":3000,"move":"pay-day","moveName":"Pay Day","type":"normal"}
+{"_id":"tm17","_t":"TechnicalMachineItem","name":"TM17","category":"tms","cost":3000,"move":"submission","moveName":"Submission","type":"fighting"}
+{"_id":"tm18","_t":"TechnicalMachineItem","name":"TM18","category":"tms","cost":3000,"move":"counter","moveName":"Counter","type":"fighting"}
+{"_id":"tm19","_t":"TechnicalMachineItem","name":"TM19","category":"tms","cost":3000,"move":"seismic-toss","moveName":"Seismic Toss","type":"fighting"}
+{"_id":"tm20","_t":"TechnicalMachineItem","name":"TM20","category":"tms","cost":2000,"move":"rage","moveName":"Rage","type":"normal"}
+{"_id":"tm21","_t":"TechnicalMachineItem","name":"TM21","category":"tms","cost":3000,"move":"mega-drain","moveName":"Mega Drain","type":"grass"}
+{"_id":"tm22","_t":"TechnicalMachineItem","name":"TM22","category":"tms","cost":5000,"move":"solar-beam","moveName":"Solar Beam","type":"grass"}
+{"_id":"tm23","_t":"TechnicalMachineItem","name":"TM23","category":"tms","cost":4000,"move":"dragon-rage","moveName":"Dragon Rage","type":"dragon"}
+{"_id":"tm24","_t":"TechnicalMachineItem","name":"TM24","category":"tms","cost":5000,"move":"thunderbolt","moveName":"Thunderbolt","type":"electric"}
+{"_id":"tm25","_t":"TechnicalMachineItem","name":"TM25","category":"tms","cost":8000,"move":"thunder","moveName":"Thunder","type":"electric"}
+{"_id":"tm26","_t":"TechnicalMachineItem","name":"TM26","category":"tms","cost":6000,"move":"earthquake","moveName":"Earthquake","type":"ground"}
+{"_id":"tm27","_t":"TechnicalMachineItem","name":"TM27","category":"tms","cost":8000,"move":"fissure","moveName":"Fissure","type":"ground"}
+{"_id":"tm28","_t":"TechnicalMachineItem","name":"TM28","category":"tms","cost":3000,"move":"dig","moveName":"Dig","type":"ground"}
+{"_id":"tm29","_t":"TechnicalMachineItem","name":"TM29","category":"tms","cost":6000,"move":"psychic","moveName":"Psychic","type":"psychic"}
+{"_id":"tm30","_t":"TechnicalMachineItem","name":"TM30","category":"tms","cost":1000,"move":"teleport","moveName":"Teleport","type":"psychic"}
+{"_id":"tm31","_t":"TechnicalMachineItem","name":"TM31","category":"tms","cost":2000,"move":"mimic","moveName":"Mimic","type":"normal"}
+{"_id":"tm32","_t":"TechnicalMachineItem","name":"TM32","category":"tms","cost":2000,"move":"double-team","moveName":"Double Team","type":"normal"}
+{"_id":"tm33","_t":"TechnicalMachineItem","name":"TM33","category":"tms","cost":3000,"move":"reflect","moveName":"Reflect","type":"psychic"}
+{"_id":"tm34","_t":"TechnicalMachineItem","name":"TM34","category":"tms","cost":2000,"move":"bide","moveName":"Bide","type":"normal"}
+{"_id":"tm35","_t":"TechnicalMachineItem","name":"TM35","category":"tms","cost":4000,"move":"metronome","moveName":"Metronome","type":"normal"}
+{"_id":"tm36","_t":"TechnicalMachineItem","name":"TM36","category":"tms","cost":5000,"move":"self-destruct","moveName":"Self-Destruct","type":"normal"}
+{"_id":"tm37","_t":"TechnicalMachineItem","name":"TM37","category":"tms","cost":3000,"move":"egg-bomb","moveName":"Egg Bomb","type":"normal"}
+{"_id":"tm38","_t":"TechnicalMachineItem","name":"TM38","category":"tms","cost":8000,"move":"fire-blast","moveName":"Fire Blast","type":"fire"}
+{"_id":"tm39","_t":"TechnicalMachineItem","name":"TM39","category":"tms","cost":3000,"move":"swift","moveName":"Swift","type":"normal"}
+{"_id":"tm40","_t":"TechnicalMachineItem","name":"TM40","category":"tms","cost":4000,"move":"skull-bash","moveName":"Skull Bash","type":"normal"}
+{"_id":"tm41","_t":"TechnicalMachineItem","name":"TM41","category":"tms","cost":4000,"move":"soft-boiled","moveName":"Soft-Boiled","type":"normal"}
+{"_id":"tm42","_t":"TechnicalMachineItem","name":"TM42","category":"tms","cost":5000,"move":"dream-eater","moveName":"Dream Eater","type":"psychic"}
+{"_id":"tm43","_t":"TechnicalMachineItem","name":"TM43","category":"tms","cost":6000,"move":"sky-attack","moveName":"Sky Attack","type":"flying"}
+{"_id":"tm44","_t":"TechnicalMachineItem","name":"TM44","category":"tms","cost":3000,"move":"rest","moveName":"Rest","type":"psychic"}
+{"_id":"tm45","_t":"TechnicalMachineItem","name":"TM45","category":"tms","cost":3000,"move":"thunder-wave","moveName":"Thunder Wave","type":"electric"}
+{"_id":"tm46","_t":"TechnicalMachineItem","name":"TM46","category":"tms","cost":4000,"move":"psywave","moveName":"Psywave","type":"psychic"}
+{"_id":"tm47","_t":"TechnicalMachineItem","name":"TM47","category":"tms","cost":8000,"move":"explosion","moveName":"Explosion","type":"normal"}
+{"_id":"tm48","_t":"TechnicalMachineItem","name":"TM48","category":"tms","cost":5000,"move":"rock-slide","moveName":"Rock Slide","type":"rock"}
+{"_id":"tm49","_t":"TechnicalMachineItem","name":"TM49","category":"tms","cost":4000,"move":"tri-attack","moveName":"Tri Attack","type":"normal"}
+{"_id":"tm50","_t":"TechnicalMachineItem","name":"TM50","category":"tms","cost":5000,"move":"substitute","moveName":"Substitute","type":"normal"}
+{"_id":"great-ball","_t":"PokeballItem","name":"Great Ball","category":"pokeballs","cost":1000,"catchPower":15}
+{"_id":"ultra-ball","_t":"PokeballItem","name":"Ultra Ball","category":"pokeballs","cost":2000,"catchPower":35}
+{"_id":"master-ball","_t":"PokeballItem","name":"Master Ball","category":"pokeballs","cost":100000,"catchPower":100}
+{"_id":"revive","_t":"RecoveryItem","name":"Revive","category":"recovery","cost":300,"effect":{"_t":"ReviveEffect","effectType":"revive","percent":0.50}}
+{"_id":"max-revive","_t":"RecoveryItem","name":"Max Revive","category":"recovery","cost":1000,"effect":{"_t":"ReviveEffect","effectType":"revive","percent":1.00}}
+{"_id":"potion","_t":"RecoveryItem","name":"Potion","category":"recovery","cost":100,"effect":{"_t":"HealEffect","effectType":"heal","amount":20}}
+{"_id":"super-potion","_t":"RecoveryItem","name":"Super Potion","category":"recovery","cost":400,"effect":{"_t":"HealEffect","effectType":"heal","amount":55}}
+{"_id":"hyper-potion","_t":"RecoveryItem","name":"Hyper Potion","category":"recovery","cost":1000,"effect":{"_t":"HealEffect","effectType":"heal","amount":150}}
+{"_id":"max-potion","_t":"RecoveryItem","name":"Max Potion","category":"recovery","cost":2000,"effect":{"_t":"HealEffect","effectType":"heal","amount":1000}}
+{"_id":"antidote","_t":"RecoveryItem","name":"Antidote","category":"status-recovery","cost":100,"effect":{"_t":"StatusHealEffect","effectType":"status-heal","status":"poison"}}
+{"_id":"burn-heal","_t":"RecoveryItem","name":"Burn Heal","category":"status-recovery","cost":250,"effect":{"_t":"StatusHealEffect","effectType":"status-heal","status":"burn"}}
+{"_id":"ice-heal","_t":"RecoveryItem","name":"Ice Heal","category":"status-recovery","cost":250,"effect":{"_t":"StatusHealEffect","effectType":"status-heal","status":"freeze"}}
+{"_id":"awakening","_t":"RecoveryItem","name":"Awakening","category":"status-recovery","cost":250,"effect":{"_t":"StatusHealEffect","effectType":"status-heal","status":"sleep"}}
+{"_id":"paralyze-heal","_t":"RecoveryItem","name":"Paralyze Heal","category":"status-recovery","cost":200,"effect":{"_t":"StatusHealEffect","effectType":"status-heal","status":"paralysis"}}
+{"_id":"ether","_t":"RecoveryItem","name":"Ether","category":"pp-recovery","cost":1200,"effect":{"_t":"PpHealEffect","effectType":"pp-heal","scope":"single","amount":10}}
+{"_id":"max-ether","_t":"RecoveryItem","name":"Max Ether","category":"pp-recovery","cost":2000,"effect":{"_t":"PpHealEffect","effectType":"pp-heal","scope":"single","amount":1000}}
+{"_id":"elixir","_t":"RecoveryItem","name":"Elixir","category":"pp-recovery","cost":3000,"effect":{"_t":"PpHealEffect","effectType":"pp-heal","scope":"all","amount":10}}
+{"_id":"max-elixir","_t":"RecoveryItem","name":"Max Elixir","category":"pp-recovery","cost":4500,"effect":{"_t":"PpHealEffect","effectType":"pp-heal","scope":"all","amount":1000}}
+{"_id":"pp-up","_t":"RecoveryItem","name":"PP Up","category":"stat-boosters","cost":9800,"effect":{"_t":"PpMaxRaise","effectType":"pp-max-raise","scope":"single","stages":1}}
+{"_id":"pp-max","_t":"RecoveryItem","name":"PP Max","category":"stat-boosters","cost":9800,"effect":{"_t":"PpMaxRaise","effectType":"pp-max-raise","scope":"single","stages":3}}

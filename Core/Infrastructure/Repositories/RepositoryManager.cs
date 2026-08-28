@@ -12,14 +12,17 @@ namespace Core.Infrastructure.Repositories
     {
         private readonly Lazy<IItemRepository> _lazyItemRepository;
         private readonly Lazy<IPokemonRepository> _lazyPokemonRepo;
+        private readonly Lazy<IUserRepository> _lazyUserRepository;
         
         public RepositoryManager(MongoContext database) 
         {
-            _lazyItemRepository = new Lazy<IItemRepository>(() => new ItemRepository());
+            _lazyItemRepository = new Lazy<IItemRepository>(() => new ItemRepository(database));
+            _lazyUserRepository = new Lazy<IUserRepository>(() => new UserRepository(database));
             _lazyPokemonRepo = new Lazy<IPokemonRepository>(() => new PokemonRepository(database));
         }
 
         public IItemRepository ItemRepository => _lazyItemRepository.Value;
         public IPokemonRepository PokemonRepository => _lazyPokemonRepo.Value;
+        public IUserRepository UserRepository => _lazyUserRepository.Value;
     }
 }

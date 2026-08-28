@@ -13,13 +13,17 @@ namespace Core.Services
     {
         private readonly Lazy<IItemService> _lazyItemService;
         private readonly Lazy<IPokemonService> _lazyPokemonService;
+        private readonly Lazy<IUserService> _lazyUserService;
+
         public ServiceManager(IRepositoryManager repositoryManager) 
         {
-            _lazyItemService = new Lazy<IItemService>(() => new ItemService(repositoryManager.ItemRepository));
+            _lazyItemService = new Lazy<IItemService>(() => new ItemService(repositoryManager));
             _lazyPokemonService = new Lazy<IPokemonService>(() => new PokemonService(repositoryManager));
+            _lazyUserService = new Lazy<IUserService>(() => new UserService(repositoryManager));
         }
 
         public IItemService ItemService => _lazyItemService.Value;
         public IPokemonService PokemonService => _lazyPokemonService.Value;
+        public IUserService IUserService => _lazyUserService.Value;
     }
 }

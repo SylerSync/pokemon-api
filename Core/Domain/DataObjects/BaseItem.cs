@@ -2,10 +2,10 @@
 {
     public abstract class BaseItem
     {
-        public string Id { get; private set; }
-        public string Name { get; private set; }
-        public string Category { get; private set; }
-        public int Cost { get; private set; }
+        public string Id { get; init; } = string.Empty;
+        public string Name { get; init; } = string.Empty;
+        public string Category { get; init; } = string.Empty;
+        public int Cost { get; protected set; } = 0;
 
         protected BaseItem(string id, string name, string category, int cost)
         {

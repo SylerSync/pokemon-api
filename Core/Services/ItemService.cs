@@ -8,36 +8,36 @@ using Core.Domain.Repositories;
 using Core.Domain.Repositories.Abstactions;
 using System.Linq;
 using System.Diagnostics.Contracts;
+using Core.Infrastructure.Repositories;
 
 namespace Core.Services
 {
-    public class ItemService : IItemService
+    internal sealed class ItemService : ServiceBase, IItemService
     {
-        private readonly IItemRepository _itemRepository;
 
-        public ItemService(IItemRepository itemRepository)
+        public ItemService(IRepositoryManager repositoryManager): base(repositoryManager)
         {
-            _itemRepository = itemRepository;
+            
         }
 
         //Get a single item using and Id
         public async Task<ItemDto> GetItemByIdAsync(string Id)
         {
-            BaseItem item = await _itemRepository.GetByIdAsync(Id);
+            BaseItem item = await _repositoryManager.ItemRepository.GetByIdAsync(Id);
             return item == null ? null : MapToDto(item);
         }
 
         //Get all items
         public async Task<IReadOnlyList<ItemDto>> GetAllItemsAsync()
         {
-            IReadOnlyList<BaseItem> items = await _itemRepository.GetAllAsync();
+            IReadOnlyList<BaseItem> items = await _repositoryManager.ItemRepository.GetAllAsync();
             return items.Select(MapToDto).ToList().AsReadOnly();
         }
 
         //Get all items based on a category
         public async Task<IReadOnlyList<ItemDto>> GetItemsByCategoryAsync(string category)
         {
-            IReadOnlyList<BaseItem> items = await _itemRepository.GetByCategoryAsync(category);
+            IReadOnlyList<BaseItem> items = await _repositoryManager.ItemRepository.GetByCategoryAsync(category);
             return items.Select(MapToDto).ToList().AsReadOnly();
         }
 
