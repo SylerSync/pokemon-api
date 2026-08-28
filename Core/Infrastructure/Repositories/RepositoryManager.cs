@@ -16,8 +16,8 @@ namespace Core.Infrastructure.Repositories
         
         public RepositoryManager(MongoContext database) 
         {
-            _lazyItemRepository = new Lazy<IItemRepository>(() => new ItemRepository());
-            _lazyUserRepository = new Lazy<IUserRepository>(() => new UserRepository());
+            _lazyItemRepository = new Lazy<IItemRepository>(() => new ItemRepository(database));
+            _lazyUserRepository = new Lazy<IUserRepository>(() => new UserRepository(database));
             _lazyPokemonRepo = new Lazy<IPokemonRepository>(() => new PokemonRepository(database));
         }
 

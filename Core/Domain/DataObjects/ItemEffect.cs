@@ -1,54 +1,59 @@
-﻿namespace Core.Domain.DataObjects
+﻿namespace Core.Domain.DataObjects;
+
+// Abstract Base Effect
+public abstract class ItemEffect
 {
-    // Abstract class for the different types of Healing item effects
-    public abstract class ItemEffect
+    public string EffectType { get; init; } = string.Empty;
+}
+
+// Derived Concrete Effects
+public class HealEffect : ItemEffect
+{
+    public int Amount { get; init; }
+
+    public HealEffect()
     {
-        public string EffectType { get; protected set; }
-        protected ItemEffect(string effectType)
-        {
-            EffectType = effectType;
-        }
+        EffectType = "heal";
     }
+}
 
-    public class HealEffect : ItemEffect
+public class ReviveEffect : ItemEffect
+{
+    public float Percent { get; init; }
+    public ReviveEffect()
     {
-        public int Amount { get; private set; }
-        public HealEffect(int amount) : base("heal")
-        {
-            Amount = amount;
-        }
+        EffectType = "revive";
     }
+}
 
-    public class StatusHealEffect : ItemEffect
+public class StatusHealEffect : ItemEffect
+{
+    public string Status { get; init; } = string.Empty;
+
+    public StatusHealEffect()
     {
-        public string Status { get; private set; }
-
-        public StatusHealEffect(string status) : base("status-heal")
-        {
-            Status = status;
-        }
+        EffectType = "status-heal";
     }
+}
 
-    public class PpHealEffect : ItemEffect
+public class PpHealEffect : ItemEffect
+{
+    public string Scope { get; init; } = string.Empty;
+    public int Amount { get; init; }
+
+    public PpHealEffect()
     {
-        public string Scope { get; private set; }
-        public int Amount { get; private set; }
-
-        public PpHealEffect(string scope, int amount): base("pp-heal")
-        {
-            Scope = scope;
-            Amount = amount;
-        }
+        EffectType = "pp-heal";
     }
+}
 
-    public class PpMaxRaise : ItemEffect
+public class PpMaxRaise : ItemEffect
+{
+    public string Scope { get; init; } = string.Empty;
+    public int Stages { get; init; }
+
+    public PpMaxRaise()
     {
-        public string Scope { get; private set; }
-        public int Stages { get; private set; }
-        public PpMaxRaise(string scope, int stages): base("pp-max-raise")
-        {
-            Scope = scope;
-            Stages = stages;
-        }
+        EffectType = "pp-max-raise";
     }
 }

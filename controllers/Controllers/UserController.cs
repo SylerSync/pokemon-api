@@ -7,12 +7,11 @@ namespace controllers.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class UserController : BaseController
     {
-        private readonly IServiceManager _serviceManager;
-        public UserController(IServiceManager serviceManager)
+        public UserController(IServiceManager serviceManager) :base(serviceManager)
         {
-            _serviceManager = serviceManager;
+    
         }
 
         [HttpPost("authenticate")]

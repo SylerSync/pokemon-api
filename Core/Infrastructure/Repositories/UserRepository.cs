@@ -3,8 +3,12 @@ using Core.Domain.Repositories.Abstactions;
 
 namespace Core.Infrastructure.Repositories
 {
-    public class UserRepository : IUserRepository
+    internal sealed class UserRepository : RepositoryBase, IUserRepository
     {
+        public UserRepository(MongoContext dbContext) : base(dbContext)
+        {
+        }
+
         public Task<bool> AuthenticateUser(string email, string passwordHash)
         {
             throw new NotImplementedException();

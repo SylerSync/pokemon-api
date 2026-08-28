@@ -17,8 +17,9 @@ namespace Core.Services
 
         public ServiceManager(IRepositoryManager repositoryManager) 
         {
-            _lazyItemService = new Lazy<IItemService>(() => new ItemService(repositoryManager.ItemRepository));
-            _lazyPokemonService = new Lazy<IPokemonService>(() => new PokemonService(repositoryManager.PokemonRepository));
+            _lazyItemService = new Lazy<IItemService>(() => new ItemService(repositoryManager));
+            _lazyPokemonService = new Lazy<IPokemonService>(() => new PokemonService(repositoryManager));
+            _lazyUserService = new Lazy<IUserService>(() => new UserService(repositoryManager));
         }
 
         public IItemService ItemService => _lazyItemService.Value;

@@ -8,14 +8,12 @@ namespace controllers.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ItemController : ControllerBase
+    public class ItemController : BaseController
     {
-        private readonly IServiceManager _serviceManager;
 
         // Set the service manager for service access
-        public ItemController(IServiceManager serviceManager)
+        public ItemController(IServiceManager serviceManager): base(serviceManager)
         {
-            _serviceManager = serviceManager;
         }
 
         //GET /api/item

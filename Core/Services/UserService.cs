@@ -8,21 +8,20 @@ using System.Text;
 
 namespace Core.Services
 {
-    public class UserService : IUserService
+    internal sealed class UserService : ServiceBase, IUserService
     {
-        private readonly IUserRepository _userRepository;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IRepositoryManager repositoryManager) : base(repositoryManager)
         {
-            _userRepository = userRepository;
+        
         }
 
         //Authenticate user and return UserDto
         public async Task<UserDto?> AuthenticateUser(string email, string passwordHash)
         { 
-            if(await _userRepository.AuthenticateUser(email, passwordHash))
+            if(await _repositoryManager.UserRepository.AuthenticateUser(email, passwordHash))
             {
-                var user = await _userRepository.GetUserByEmail(email);
+                var user = await _repositoryManager.UserRepository.GetUserByEmail(email);
                 if (user != null) // ensure the user hasnt been deleted since auth call
                 {
                     return MapToDto(user);
