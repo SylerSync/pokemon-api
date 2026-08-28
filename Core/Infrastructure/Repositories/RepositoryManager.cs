@@ -11,13 +11,16 @@ namespace Core.Infrastructure.Repositories
     {
         private readonly Lazy<IItemRepository> _lazyItemRepository;
         private readonly Lazy<IPokemonRepository> _lazyPokemonRepo;
+        private readonly Lazy<IUserRepository> _lazyUserRepository;
         
         public RepositoryManager() 
         {
             _lazyItemRepository = new Lazy<IItemRepository>(() => new ItemRepository());
+            _lazyUserRepository = new Lazy<IUserRepository>(() => new UserRepository());
         }
 
         public IItemRepository ItemRepository => _lazyItemRepository.Value;
         public IPokemonRepository PokemonRepository => _lazyPokemonRepo.Value;
+        public IUserRepository UserRepository => _lazyUserRepository.Value;
     }
 }
