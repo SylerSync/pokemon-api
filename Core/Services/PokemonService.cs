@@ -45,7 +45,9 @@ namespace Core.Services
         public async Task<List<PokemonDto>> GetPokemonAsync(CancellationToken cancellationToken = default)
         {
             var result = await _repositoryManager.PokemonRepository.GetPokemonAsync(cancellationToken);
-            var dtos = result.Select(p => new PokemonDto {
+
+            var dtos = result.Select(p => new PokemonDto
+            {
                 ID = p.ID,
                 Name = p.Name,
                 Types = p.Types,

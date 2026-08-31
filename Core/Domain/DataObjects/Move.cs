@@ -1,4 +1,6 @@
 ﻿using Core.Domain.Enums;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +12,14 @@ namespace Core.Domain.DataObjects
     public class Move
     {
         public string Name { get; set; }
+        [BsonRepresentation(BsonType.String)]
         public List<TypeEnum> Types { get; set; }
         public int Power { get; set; }
         public int MaxPP { get; set; }
         public int CurrentPP { get; set; }
         public int Accuracy { get; set; }
         public int Priority { get; set; }
+        [BsonRepresentation(BsonType.String)]
         public DamageClassEnum DamageClass { get; set; }
         public bool TargetSelf { get; set; }
         public int StatChance { get; set; } = 0;
@@ -29,6 +33,7 @@ namespace Core.Domain.DataObjects
         public int MaxTurns { get; set;} = 0;
         public int MinHits { get; set; } = 0;
         public int MaxHits { get; set; } = 0;
+        [BsonRepresentation(BsonType.String)]
         public MoveCategoryEnum Catagory { get; set; }
 
         public Move(string name, List<TypeEnum> types, int power, int maxPP, int currentPP, int accuracy, int priority, DamageClassEnum damageClass, bool targetSelf, int statChance, string ailment, int ailmentChance, int drain, int healing, int flinchChance, int critRate, int minTurns, int maxTurns, int minHits, int maxHits, MoveCategoryEnum catagory)
