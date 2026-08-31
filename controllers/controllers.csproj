@@ -16,4 +16,11 @@
     <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+  <Content Include="..\Core\Infrastructure\MongoSeedData\**\*.*"
+           Link="MongoSeedData\%(RecursiveDir)%(Filename)%(Extension)"
+           CopyToOutputDirectory="PreserveNewest"
+           CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

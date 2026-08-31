@@ -36,9 +36,9 @@ namespace Core.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<List<Pokemon>> GetPokemonAsync(CancellationToken cancellationToken = default)
+        public async Task<List<Pokemon>> GetPokemonAsync(CancellationToken cancellationToken = default)
         {
-            return _dbContext.Pokemon.ToListAsync(cancellationToken);
+            return await _dbContext.Pokemon.ToListAsync(cancellationToken);
         }
 
         public Task<Pokemon> GetPokemonByIDAsync(int id, CancellationToken cancellationToken = default)
