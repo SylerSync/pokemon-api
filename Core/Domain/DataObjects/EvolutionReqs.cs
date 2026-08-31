@@ -8,10 +8,10 @@ namespace Core.Domain.DataObjects
 {
     public class EvolutionReqs
     {
-        public int Level { get; set; }
-        public string Item { get; set; }
-        public string HeldItem { get; set; }
-        public string Trigger { get; set; }
+        public int? Level { get; set; }
+        public string? Item { get; set; }
+        public string? HeldItem { get; set; }
+        public string? Trigger { get; set; }
         public string NextEvo { get; set; }
 
         public EvolutionReqs(int level, string item, string heldItem, string trigger, string nextEvo)
@@ -21,6 +21,10 @@ namespace Core.Domain.DataObjects
             HeldItem = heldItem;
             Trigger = trigger;
             NextEvo = nextEvo;
+        }
+
+        public EvolutionReqs()
+        {
         }
     }
 }

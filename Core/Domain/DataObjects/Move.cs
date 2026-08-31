@@ -23,7 +23,7 @@ namespace Core.Domain.DataObjects
         public DamageClassEnum DamageClass { get; set; }
         public bool TargetSelf { get; set; }
         public int StatChance { get; set; } = 0;
-        public string Ailment { get; set; } = null;
+        public string? Ailment { get; set; } = null;
         public int AilmentChance { get; set; } = 0;
         public int Drain { get; set; } = 0; // Negative is recoil
         public int Healing { get; set; } = 0; // % of Max HP healed
@@ -59,6 +59,10 @@ namespace Core.Domain.DataObjects
             MinHits = minHits;
             MaxHits = maxHits;
             Catagory = catagory;
+        }
+
+        public Move()
+        {
         }
     }
 }

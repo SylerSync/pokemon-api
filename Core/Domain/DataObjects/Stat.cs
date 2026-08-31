@@ -22,5 +22,9 @@ namespace Core.Domain.DataObjects
             BaseStat = baseStat;
             StatTotal = statTotal;
         }
+
+        public Stat()
+        {
+        }
     }
 }
