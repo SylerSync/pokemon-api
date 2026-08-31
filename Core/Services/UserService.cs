@@ -2,33 +2,56 @@
 using Core.Domain.DataObjects;
 using Core.Domain.Repositories.Abstactions;
 using Core.Services.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Microsoft.AspNetCore.Identity;
 
 namespace Core.Services
 {
     internal sealed class UserService : ServiceBase, IUserService
     {
-
-        public UserService(IRepositoryManager repositoryManager) : base(repositoryManager)
+        private readonly IPasswordHasher<User> _passwordHasher;
+        public UserService(IRepositoryManager repositoryManager, IPasswordHasher<User> passwordHasher) : base(repositoryManager)
         {
-        
+            _passwordHasher = passwordHasher;
+        }
+
+        public async Task<UserDto> AddNewUser(UserRequest user)
+        {
+            var normalizedEmail = user.Email.Trim().ToLowerInvariant();
+
+            var newUser = new User
+            {
+                Email = normalizedEmail
+            };
+
+            // Hash the plain string data.
+            newUser.PasswordHash = _passwordHasher.HashPassword(newUser, user.Password);
+
+            bool isSuccess = await _repositoryManager.UserRepository.InsertNewUser(newUser);
+            if (!isSuccess) return null;
+
+            return MapToDto(newUser);
         }
 
         //Authenticate user and return UserDto
-        public async Task<UserDto?> AuthenticateUser(string email, string passwordHash)
-        { 
-            if(await _repositoryManager.UserRepository.AuthenticateUser(email, passwordHash))
+        public async Task<UserDto?> AuthenticateUser(UserRequest request)
+        {
+            // Normalize email and check for a user
+            var normalizedEmail = request.Email.Trim().ToLowerInvariant();
+            var user = await _repositoryManager.UserRepository.GetUserByEmail(normalizedEmail);
+            if(user is null)
             {
-                var user = await _repositoryManager.UserRepository.GetUserByEmail(email);
-                if (user != null) // ensure the user hasnt been deleted since auth call
-                {
-                    return MapToDto(user);
-                }
-                return null; // User couldnt be found after authentication
+                return null; //No user found
             }
-            return null; // Authentication failed
+
+            var result = _passwordHasher.VerifyHashedPassword(user, user.PasswordHash, request.Password);
+
+            if(result == PasswordVerificationResult.Failed)
+            {
+                return null; //Invalid password
+            }
+
+            return MapToDto(user);
+            
         }
 
         //DTO Mapping
@@ -36,8 +59,7 @@ namespace Core.Services
         {
             var dto = new UserDto
             {
-                Email = user.Email,
-                Username = user.Username,
+                Email = user.Email
             };
 
             return dto;

@@ -1,9 +1,11 @@
 using controllers.Configuration;
+using Core.Domain.DataObjects;
 using Core.Domain.Repositories.Abstactions;
 using Core.Infrastructure;
 using Core.Infrastructure.Repositories;
 using Core.Services;
 using Core.Services.Abstractions;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson.Serialization.Conventions;
@@ -16,7 +18,7 @@ builder.Services.AddControllers();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 builder.Services.Configure<MongoSeedOptions>(builder.Configuration.GetSection("MongoSeed"));

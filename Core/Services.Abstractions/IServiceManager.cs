@@ -10,6 +10,7 @@ namespace Core.Services.Abstractions
     {
         IItemService ItemService { get; }
         IPokemonService PokemonService { get; }
-        IUserService IUserService { get; }
+        IUserService UserService { get; }
+        IPasswordService PasswordService { get; }
     }
 }

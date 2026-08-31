@@ -10,14 +10,31 @@ namespace Core.Infrastructure.Repositories
         {
         }
 
-        public Task<bool> AuthenticateUser(string email, string passwordHash)
+        // Fetch user document by normalized email
+        public async Task<User?> GetUserByEmail(string email)
         {
-            throw new NotImplementedException();
+            var normalizedEmail = email.Trim().ToLowerInvariant();
+            return await _dbContext.Users.AsNoTracking().SingleOrDefaultAsync(u => u.Email == normalizedEmail);
         }
 
-        public Task<User> GetUserByEmail(string email)
+        // Add a new User entity into the users collection
+        public async Task<bool> InsertNewUser(User newUser)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // 1. Stage the entity
+                await _dbContext.Users.AddAsync(newUser);
+
+                // 2. Save directly without BeginTransactionAsync
+                int documentsAffected = await _dbContext.SaveChangesAsync();
+
+                return documentsAffected == 1;
+            }
+            catch (DbUpdateException)
+            {
+                // Handles primary key (Email) duplicates or database constraint errors
+                return false;
+            }
         }
     }
 }
