@@ -11,5 +11,6 @@ namespace Core.Domain.Repositories.Abstactions
         IItemRepository ItemRepository { get; }
         IPokemonRepository PokemonRepository { get; }
         IUserRepository UserRepository { get; }
+        IInventoryrepository InventoryRepository { get; }
     }
 }

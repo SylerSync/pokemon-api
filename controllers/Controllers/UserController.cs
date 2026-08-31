@@ -15,7 +15,7 @@ namespace controllers.Controllers
     
         }
         
-        // User login
+        // Authenticate User login
         [HttpPost("authenticate")]
         public async Task<ActionResult<UserDto?>> AuthenticateUser([FromBody] UserRequest request)
         {

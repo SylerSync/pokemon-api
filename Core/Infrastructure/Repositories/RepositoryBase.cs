@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Core.Infrastructure.Repositories
+﻿namespace Core.Infrastructure.Repositories
 {
     internal abstract class RepositoryBase
     {
