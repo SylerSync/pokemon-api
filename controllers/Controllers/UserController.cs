@@ -2,6 +2,7 @@
 using Core.Services.Abstractions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace controllers.Controllers
 {
@@ -13,7 +14,8 @@ namespace controllers.Controllers
         {
     
         }
-
+        
+        // User login
         [HttpPost("authenticate")]
         public async Task<ActionResult<UserDto?>> AuthenticateUser([FromBody] UserRequest request)
         {
@@ -22,11 +24,35 @@ namespace controllers.Controllers
                 return BadRequest("Email and password is required.");
             }
 
-            var userDto = await _serviceManager.IUserService.AuthenticateUser(request.Email, request.Password);
+            var userDto = await _serviceManager.UserService.AuthenticateUser(request);
+
+            if (userDto == null)
+            {
+                return Unauthorized("Email or password is incorrect.");
+            }
 
             return Ok(userDto);
         }
 
+        // Add new user to database
+        [HttpPost("newUser")]
+        public async Task<ActionResult> AddNewUser([FromBody] UserRequest request) {
+            try
+            {
+                var newUser = await _serviceManager.UserService.AddNewUser(request);
+                if (newUser is null)
+                {
+                    return BadRequest("User creation failed or user exists");
+                }
+                return Ok("New user added.");
+
+            }
+            catch (DbUpdateException)
+            {
+                return Conflict("A user with this email address already exists");
+            }
+            
+        }
 
     }
 }

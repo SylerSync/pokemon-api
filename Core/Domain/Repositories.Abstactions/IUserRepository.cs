@@ -4,7 +4,8 @@ namespace Core.Domain.Repositories.Abstactions
 {
     public interface IUserRepository
     {
-        Task<bool> AuthenticateUser(string email, string passwordHash);
-        Task<User> GetUserByEmail(string email);
+        // Authenticate function is not needed due to AspNetCore.Identity handling password validation in service layer.
+        Task<User?> GetUserByEmail(string email);
+        Task<bool> InsertNewUser(User user);
     }
 }
