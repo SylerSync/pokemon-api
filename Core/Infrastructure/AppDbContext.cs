@@ -8,6 +8,7 @@ public class AppDbContext : DbContext
 {
     public DbSet<Pokemon> Pokemon { get; set; }
     public DbSet<BaseItem> Items { get; set; }
+    public DbSet<User> Users { get; set; }
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -15,7 +16,17 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        // 1. Map BaseItem Collection, _id, and Polymorphic Discriminators
+        // Map User Collection
+        modelBuilder.Entity<User>(b =>
+        {
+            b.ToCollection("users");
+
+            // Explicitly set Email as the Key and map it to MongoDB's '_id' field
+            b.HasKey(u => u.Email);
+            b.Property(u => u.Email).HasElementName("_id");
+        });
+
+        // Map BaseItem Collection, _id, and Polymorphic Discriminators
         modelBuilder.Entity<BaseItem>(b =>
         {
             b.ToCollection("items")
@@ -30,7 +41,7 @@ public class AppDbContext : DbContext
             b.Property(i => i.Id).HasElementName("_id");
         });
 
-        // 2. Map Concrete Owned ItemEffect (EF Core handles camelCase for properties automatically)
+        // Map Concrete Owned ItemEffect (EF Core handles camelCase for properties automatically)
         modelBuilder.Entity<RecoveryItem>(b =>
         {
             b.OwnsOne(r => r.Effect);
