@@ -7,5 +7,6 @@
         {
             Description = description;
         }
+        public EvolutionItem() { } // Empty contstructor for Entity Framework
     }
 }

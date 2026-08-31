@@ -15,6 +15,7 @@
         public string Scope { get; set; }
         public int? Stages { get; set; }
         public int? CatchPower { get; set; }
+        public float? Percent {  get; set; }
         public string Move { get; set; }
         public string MoveName { get; set; }
         public string PokemonName { get; set; } 

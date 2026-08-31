@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Core.Domain.DataObjects
 {
+    
     public class Pokemon
     {
         [BsonId]
@@ -37,6 +38,7 @@ namespace Core.Domain.DataObjects
         public int CurrentExp { get; set; }
         public string[] MinorStatus { get; set; } = Array.Empty<string>();
 
+        public Pokemon() { } // Empty contstructor for Entity Framework
         public Pokemon(string _idvalue, int id, string name, bool shiny, Sprites sprites, List<TypeEnum> types, int height, int weight, string cry, int captureRate, int totalHP, int currentHP, List<Stat> stats, List<Move> moves, List<Move> learnableMoves, int totalKOs, int totalFaints, int level, List<EvolutionReqs> evolutionReqs, int baseExp, int currentExp, string[] minorStatus)
         {
             _id = _idvalue;
