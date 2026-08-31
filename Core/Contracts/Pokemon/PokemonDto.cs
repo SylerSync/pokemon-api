@@ -14,12 +14,13 @@ namespace Core.Contracts.Pokemon
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public string FlavorText { get; set; }
         public Sprites Sprites { get; set; }
-        public List<TypeEnum> Types { get; set; } = new List<TypeEnum>();
+        public List<string> Types { get; set; } = new List<string>();
         public int Height { get; set; }
         public int Weight { get; set; }
         public string Cry { get; set; }
-        public List<Stat> Stats { get; set; }
+        public List<StatDto> Stats { get; set; }
         public List<EvolutionReqs> EvolutionReqs { get; set; } = new List<EvolutionReqs>();
     }
 }

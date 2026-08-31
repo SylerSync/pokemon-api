@@ -17,6 +17,7 @@ namespace Core.Domain.DataObjects
         public string _id { get; set; }
         public int ID { get; set; }
         public string Name { get; set; }
+        public string FlavorText { get; set; }
         public bool Shiny { get; set; }
         public Sprites Sprites { get; set; }
         [BsonRepresentation(BsonType.String)]
@@ -29,7 +30,7 @@ namespace Core.Domain.DataObjects
         public int CurrentHP { get; set; }
         public List<Stat> Stats { get; set; }
         public List<Move> Moves { get; set; } = new List<Move>();
-        public List<Move> LeanrableMoves { get; set; } = new List<Move>();
+        public List<string> LearnableMoves { get; set; } = new List<string>();
         public int TotalKOs { get; set; }
         public int TotalFaints { get; set; }
         public int Level { get; set; }
@@ -39,11 +40,12 @@ namespace Core.Domain.DataObjects
         public string[] MinorStatus { get; set; } = Array.Empty<string>();
 
         public Pokemon() { } // Empty contstructor for Entity Framework
-        public Pokemon(string _idvalue, int id, string name, bool shiny, Sprites sprites, List<TypeEnum> types, int height, int weight, string cry, int captureRate, int totalHP, int currentHP, List<Stat> stats, List<Move> moves, List<Move> learnableMoves, int totalKOs, int totalFaints, int level, List<EvolutionReqs> evolutionReqs, int baseExp, int currentExp, string[] minorStatus)
+        public Pokemon(string _idvalue, int id, string name, string flavorText, bool shiny, Sprites sprites, List<TypeEnum> types, int height, int weight, string cry, int captureRate, int totalHP, int currentHP, List<Stat> stats, List<Move> moves, List<string> learnableMoves, int totalKOs, int totalFaints, int level, List<EvolutionReqs> evolutionReqs, int baseExp, int currentExp, string[] minorStatus)
         {
             _id = _idvalue;
             ID = id;
             Name = name;
+            FlavorText = flavorText;
             Shiny = shiny;
             Sprites = sprites;
             Types = types;
@@ -55,7 +57,7 @@ namespace Core.Domain.DataObjects
             CurrentHP = currentHP;
             Stats = stats;
             Moves = moves;
-            LeanrableMoves = learnableMoves;
+            LearnableMoves = learnableMoves;
             TotalKOs = totalKOs;
             TotalFaints = totalFaints;
             Level = level;

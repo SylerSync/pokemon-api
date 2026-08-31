@@ -1,6 +1,10 @@
 ﻿using Core.Domain.DataObjects;
+using Core.Domain.Enums;
 using Core.Domain.Repositories.Abstactions;
 using Microsoft.EntityFrameworkCore;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +16,7 @@ namespace Core.Infrastructure.Repositories
 {
     internal sealed class PokemonRepository : RepositoryBase, IPokemonRepository
     {
-        public PokemonRepository(AppDbContext dbContext) : base(dbContext) 
+        public PokemonRepository(AppDbContext dbContext) : base(dbContext)
         {
         }
 
@@ -38,7 +42,8 @@ namespace Core.Infrastructure.Repositories
 
         public async Task<List<Pokemon>> GetPokemonAsync(CancellationToken cancellationToken = default)
         {
-            return await _dbContext.Pokemon.ToListAsync(cancellationToken);
+            var pokemon = await _dbContext.Pokemon.ToListAsync(cancellationToken);
+            return pokemon;
         }
 
         public Task<Pokemon> GetPokemonByIDAsync(int id, CancellationToken cancellationToken = default)
