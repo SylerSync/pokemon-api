@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson.Serialization.Conventions;
+using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
+builder.Services.Configure<MongoSeedOptions>(builder.Configuration.GetSection("MongoSeed"));
 
 var conventionPack = new ConventionPack
 {
@@ -34,6 +36,13 @@ builder.Services.Configure<MongoDBSetting>(
     builder.Configuration.GetSection("MongoDB"));
 
 // 2. Register AppDbContext with MongoDB EF Core Provider
+var mongoSettings = builder.Configuration.GetSection("MongoDB").Get<MongoDBSetting>()
+    ?? throw new InvalidOperationException("Missing 'MongoDB' configuration section.");
+
+builder.Services.AddSingleton<IMongoClient>(_ => new MongoClient(mongoSettings.ConnectionString));
+builder.Services.AddSingleton(sp =>
+    sp.GetRequiredService<IMongoClient>().GetDatabase(mongoSettings.DatabaseName));
+
 builder.Services.AddDbContext<AppDbContext>((sp, options) =>
 {
     var mongoSettings = sp.GetRequiredService<IOptions<MongoDBSetting>>().Value;
@@ -42,7 +51,11 @@ builder.Services.AddDbContext<AppDbContext>((sp, options) =>
            .UseCamelCaseNamingConvention(); // <--- Forces EF Core to map all properties to camelCase in MongoDB
 });
 
+builder.Services.AddSingleton<MongoSeeder>();
+
 var app = builder.Build();
+
+await app.Services.GetRequiredService<MongoSeeder>().SeedAsync();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

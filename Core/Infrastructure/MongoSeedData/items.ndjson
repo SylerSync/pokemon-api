@@ -1,5 +1,4 @@
-{
-  "_id": "fire-stone","_t": "EvolutionItem","Name": "Fire Stone","Category": "evolution-stones","Cost": 3000,"Description": "A peculiar stone that can make certain species of Pokémon evolve. It has a fiery orange heart."}
+{"_id": "fire-stone","_t": "EvolutionItem","Name": "Fire Stone","Category": "evolution-stones","Cost": 3000,"Description": "A peculiar stone that can make certain species of Pokémon evolve. It has a fiery orange heart."}
 {"_id":"water-stone","_t":"EvolutionItem","Name":"Water Stone","Category":"evolution-stones","Cost":3000,"Description":"A peculiar stone that can make certain species of Pokémon evolve. It is a clear, light blue."}
 {"_id":"thunder-stone","_t":"EvolutionItem","Name":"Thunder Stone","Category":"evolution-stones","Cost":3000,"Description":"A peculiar stone that can make certain species of Pokémon evolve. It has a distinct thunderbolt pattern."}
 {"_id":"leaf-stone","_t":"EvolutionItem","Name":"Leaf Stone","Category":"evolution-stones","Cost":3000,"Description":"A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable leaf pattern."}

@@ -10,10 +10,10 @@ namespace Core.Domain.DataObjects
 {
     public class Sprites
     {
-        public string Front { get; set; }
-        public string Back { get; set; }
-        public string ShinyFront { get; set; }
-        public string ShinyBack { get; set; }
+        public string? Front { get; set; }
+        public string? Back { get; set; }
+        public string? ShinyFront { get; set; }
+        public string? ShinyBack { get; set; }
 
         public Sprites(string front, string back, string shinyFront, string shinyBack) 
         {
@@ -21,6 +21,10 @@ namespace Core.Domain.DataObjects
             Back = back;
             ShinyFront = shinyFront;
             ShinyBack = shinyBack;
+        }
+
+        public Sprites()
+        {
         }
 
         public string Get(bool shiny, bool back) =>

@@ -47,6 +47,10 @@ public class AppDbContext : DbContext
             b.OwnsOne(r => r.Effect);
         });
 
-        modelBuilder.Ignore<Pokemon>();
+        modelBuilder.Entity<Pokemon>(p =>
+        {
+            p.ToCollection("pokemon");
+            p.Property(i => i._id).HasElementName("_id");
+        });
     }
 }
