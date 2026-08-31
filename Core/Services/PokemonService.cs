@@ -50,12 +50,13 @@ namespace Core.Services
             {
                 ID = p.ID,
                 Name = p.Name,
-                Types = p.Types,
+                FlavorText = p.FlavorText,
+                Types = p.Types.Select(t => t.ToString()).ToList(),
                 Sprites = p.Sprites,
                 Height = p.Height,
                 Weight = p.Weight,
                 Cry = p.Cry,
-                Stats = p.Stats,
+                Stats = p.Stats.Select(s => new StatDto { Name = s.Name.ToString(), BaseStat = s.BaseStat }).ToList(),
                 EvolutionReqs = p.EvolutionReqs
             }
             ).ToList();
