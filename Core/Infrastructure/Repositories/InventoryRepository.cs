@@ -15,7 +15,22 @@ namespace Core.Infrastructure.Repositories
 
         public async Task<Inventory?> GetInventoryByEmail(string email)
         {
-            return await _dbContext.Inventory.FirstOrDefaultAsync(i => i.UserEmail == email);
+            var inventory = await _dbContext.Inventory.AsNoTracking().FirstOrDefaultAsync(i => i.UserEmail == email);
+            if(inventory == null)
+            {
+                inventory = new Inventory()
+                {
+                    UserEmail = email,
+                    Items = [],
+                    Funds = 0
+                };
+
+                await _dbContext.Inventory.AddAsync(inventory);
+
+                await _dbContext.SaveChangesAsync();
+            }
+
+            return inventory;
         }
 
         public async Task<bool> UpdateInventoryByEmail(Inventory inventory)
