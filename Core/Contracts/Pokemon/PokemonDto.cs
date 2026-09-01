@@ -22,5 +22,6 @@ namespace Core.Contracts.Pokemon
         public string Cry { get; set; }
         public List<StatDto> Stats { get; set; }
         public List<EvolutionReqs> EvolutionReqs { get; set; } = new List<EvolutionReqs>();
+        public bool WishList { get; set; }
     }
 }

@@ -54,5 +54,36 @@ namespace controllers.Controllers
             
         }
 
+        // Add to user's wishList
+        public record WishListRequest(string PokemonName, string User);
+
+        [HttpPost("newWishList")]
+        public async Task<ActionResult<UserDto?>> AddWishListPokemon([FromBody] WishListRequest request)
+        {
+            try
+            {
+                var updatedUser = await _serviceManager.UserService.AddWishToList(request.PokemonName, request.User);
+                return Ok(updatedUser);
+            }
+            catch (DbUpdateException)
+            {
+                return BadRequest("An error occured updating user");
+            }
+        }
+
+        [HttpPost("removeWishList")]
+        public async Task<ActionResult<UserDto?>> RemoveWishListPokemon([FromBody] WishListRequest request)
+        {
+            try
+            {
+                var updatedUser = await _serviceManager.UserService.RemoveWishFromList(request.PokemonName, request.User);
+                return Ok(updatedUser);
+            }
+            catch (DbUpdateException)
+            {
+                return BadRequest("An error occured updating user");
+            }
+        }
+
     }
 }

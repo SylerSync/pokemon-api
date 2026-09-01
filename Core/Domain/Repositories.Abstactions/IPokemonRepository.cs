@@ -16,6 +16,5 @@ namespace Core.Domain.Repositories.Abstactions
         Task<Pokemon> EditPokemonAsync(Pokemon oldPokemon, Pokemon newPokemon, CancellationToken cancellationToken = default);
         Task AddPokemonAsync(Pokemon pokemon, CancellationToken cancellationToken = default);
         Task DeletePokemonAsync(Pokemon pokemon, CancellationToken cancellationToken = default);
-
     }
 }
