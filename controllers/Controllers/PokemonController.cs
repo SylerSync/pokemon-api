@@ -20,6 +20,13 @@ namespace controllers.Controllers
         public async Task<List<PokemonDto>> GetPokemon()
         {
             var pokemon = await _serviceManager.PokemonService.GetPokemonAsync();
+            try
+            {
+                var user = User.Identity;
+            }
+            catch (Exception ex)
+            {
+            }
             return pokemon;
         }
 

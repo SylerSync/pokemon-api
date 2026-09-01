@@ -19,6 +19,7 @@ namespace Core.Domain.DataObjects
         public string Name { get; set; }
         public string FlavorText { get; set; }
         public bool Shiny { get; set; }
+        public bool? WishList { get; set; }
         public Sprites Sprites { get; set; }
         [BsonRepresentation(BsonType.String)]
         public List<TypeEnum> Types { get; set; } = new List<TypeEnum>();
@@ -40,7 +41,7 @@ namespace Core.Domain.DataObjects
         public string[] MinorStatus { get; set; } = Array.Empty<string>();
 
         public Pokemon() { } // Empty contstructor for Entity Framework
-        public Pokemon(string _idvalue, int id, string name, string flavorText, bool shiny, Sprites sprites, List<TypeEnum> types, int height, int weight, string cry, int captureRate, int totalHP, int currentHP, List<Stat> stats, List<Move> moves, List<string> learnableMoves, int totalKOs, int totalFaints, int level, List<EvolutionReqs> evolutionReqs, int baseExp, int currentExp, string[] minorStatus)
+        public Pokemon(string _idvalue, int id, string name, string flavorText, bool shiny, Sprites sprites, List<TypeEnum> types, int height, int weight, string cry, int captureRate, int totalHP, int currentHP, List<Stat> stats, List<Move> moves, List<string> learnableMoves, int totalKOs, int totalFaints, int level, List<EvolutionReqs> evolutionReqs, int baseExp, int currentExp, string[] minorStatus, bool wishList)
         {
             _id = _idvalue;
             ID = id;
@@ -65,6 +66,7 @@ namespace Core.Domain.DataObjects
             BaseExp = baseExp;
             CurrentExp = currentExp;
             MinorStatus = minorStatus;
+            WishList = wishList;
         }
     }
 }

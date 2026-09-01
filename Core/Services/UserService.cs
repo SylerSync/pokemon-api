@@ -20,7 +20,8 @@ namespace Core.Services
 
             var newUser = new User
             {
-                Email = normalizedEmail
+                Email = normalizedEmail,
+                WishList = new List<string>()
             };
 
             // Hash the plain string data.
@@ -29,6 +30,17 @@ namespace Core.Services
             bool isSuccess = await _repositoryManager.UserRepository.InsertNewUser(newUser);
             if (!isSuccess) return null;
 
+            return MapToDto(newUser);
+        }
+
+        public async Task<UserDto> AddWishToList(string pokemonName, string user, CancellationToken cancellationToken = default)
+        {
+            var normalizedEmail = user.Trim().ToLowerInvariant();
+            if (!await _repositoryManager.UserRepository.AddToWishListAsync(pokemonName, user, cancellationToken))
+            {
+
+            }
+            var newUser = await _repositoryManager.UserRepository.GetUserByEmail(normalizedEmail);
             return MapToDto(newUser);
         }
 
@@ -54,12 +66,24 @@ namespace Core.Services
             
         }
 
+        public async Task<UserDto> RemoveWishFromList(string pokemonName, string user, CancellationToken cancellationToken = default)
+        {
+            var normalizedEmail = user.Trim().ToLowerInvariant();
+            if (!await _repositoryManager.UserRepository.RemoveFromWishListAsync(pokemonName, user, cancellationToken))
+            {
+
+            }
+            var newUser = await _repositoryManager.UserRepository.GetUserByEmail(normalizedEmail);
+            return MapToDto(newUser);
+        }
+
         //DTO Mapping
         public UserDto MapToDto(User user)
         {
             var dto = new UserDto
             {
-                Email = user.Email
+                Email = user.Email,
+                WishList = user.WishList
             };
 
             return dto;
