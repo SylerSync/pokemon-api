@@ -23,9 +23,13 @@ namespace Core.Infrastructure.Repositories
             .ToListAsync();
         }
 
-        public Task<BaseItem> GetByIdAsync(string id)
+        public async Task<BaseItem?> GetByIdAsync(string id)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(id))
+                return null;
+
+            return await _dbContext.Items
+                .FirstOrDefaultAsync(x => x.Id.ToLower() == id.ToLower());
         }
     }
 }

@@ -9,6 +9,7 @@ public class AppDbContext : DbContext
     public DbSet<Pokemon> Pokemon { get; set; }
     public DbSet<BaseItem> Items { get; set; }
     public DbSet<User> Users { get; set; }
+    public DbSet<Inventory> Inventory { get; set; }
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -47,10 +48,20 @@ public class AppDbContext : DbContext
             b.OwnsOne(r => r.Effect);
         });
 
+        // Map Pokemon Collection
         modelBuilder.Entity<Pokemon>(p =>
         {
             p.ToCollection("pokemon");
             p.Property(i => i._id).HasElementName("_id");
+        });
+
+        // Map Inventory collection
+        modelBuilder.Entity<Inventory>(entity =>
+        {
+            entity.ToCollection("inventory");
+            entity.HasKey(i => i.UserEmail);
+            entity.Property(i => i.UserEmail).HasElementName("_id");
+            entity.OwnsMany(i => i.Items);
         });
     }
 }
