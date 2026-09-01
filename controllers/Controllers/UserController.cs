@@ -85,5 +85,16 @@ namespace controllers.Controllers
             }
         }
 
+        [HttpGet("getUserData/{email}")]
+        public async Task<ActionResult> GetUserData(string email)
+        {
+            var user = await _serviceManager.UserService.GetUserDataByEmail(email);
+            if(user == null)
+            {
+                return BadRequest("Unable to find user data.");
+            }
+            return Ok(user);
+        }
+
     }
 }

@@ -77,6 +77,17 @@ namespace Core.Services
             return MapToDto(newUser);
         }
 
+        public async Task<UserDto?> GetUserDataByEmail(string email)
+        {
+            var normalizedemail = email.Trim().ToLowerInvariant();
+            var user = await _repositoryManager.UserRepository.GetUserByEmail(normalizedemail);
+            if(user == null)
+            {
+                return null;
+            }
+            return MapToDto(user);
+        }
+
         //DTO Mapping
         public UserDto MapToDto(User user)
         {
@@ -89,5 +100,6 @@ namespace Core.Services
             return dto;
         }
 
+        
     }
 }
