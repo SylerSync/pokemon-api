@@ -12,6 +12,7 @@ namespace Core.Services
         private readonly Lazy<IUserService> _lazyUserService;
         private readonly Lazy<IPasswordService> _lazyPasswordService;
         private readonly Lazy<IInventoryService> _lazyInventoryService;
+        private readonly Lazy<IPokeBoxService> _lazyPokeBoxService;
 
         public ServiceManager(IRepositoryManager repositoryManager, IPasswordHasher<User> passwordHasher) 
         {
@@ -20,6 +21,7 @@ namespace Core.Services
             _lazyUserService = new Lazy<IUserService>(() => new UserService(repositoryManager, passwordHasher));
             _lazyPasswordService = new Lazy<IPasswordService>(() => new PasswordService(passwordHasher));
             _lazyInventoryService = new Lazy<IInventoryService>(() => new InventoryService(repositoryManager));
+            _lazyPokeBoxService = new Lazy<IPokeBoxService>(() => new PokeBoxService(repositoryManager));
         }
 
         public IItemService ItemService => _lazyItemService.Value;
@@ -27,5 +29,6 @@ namespace Core.Services
         public IUserService UserService => _lazyUserService.Value;
         public IPasswordService PasswordService => _lazyPasswordService.Value;
         public IInventoryService InventoryService => _lazyInventoryService.Value;
+        public IPokeBoxService PokeBoxService => _lazyPokeBoxService.Value;
     }
 }
