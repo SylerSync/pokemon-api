@@ -59,6 +59,18 @@ namespace Core.Services
             }
         }
 
+        public async Task<PokeBoxDto> GetPokeBox(string userID, CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return MapToDto(await _repositoryManager.PokeBoxRepository.GetUsersPokeBox(userID, cancellationToken));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving user's PokeBox: " + ex.Message, ex);
+            }
+        }
+
         // DTO Mapping
         public PokeBoxDto MapToDto(PokeBox pokeBox)
         {

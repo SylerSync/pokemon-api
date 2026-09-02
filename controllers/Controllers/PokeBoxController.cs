@@ -33,5 +33,23 @@ namespace controllers.Controllers
                 return BadRequest("An error occured updating pokebox");
             }
         }
+
+        [HttpGet("getPokeBox/{userID}")]
+        public async Task<ActionResult<PokeBoxDto?>> GetPokeBox(string userID)
+        {
+            try
+            {
+                var pokeBox = await _serviceManager.PokeBoxService.GetPokeBox(userID);
+                if (pokeBox == null)
+                {
+                    return NotFound($"PokeBox for user {userID} not found.");
+                }
+                return Ok(pokeBox);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("An error occurred while retrieving the PokeBox.");
+            }
+        }
     }
 }
