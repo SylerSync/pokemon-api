@@ -13,11 +13,11 @@ namespace Core.Domain.DataObjects
     {
         public string Name { get; set; }
         [BsonRepresentation(BsonType.String)]
-        public List<TypeEnum> Types { get; set; }
-        public int Power { get; set; }
+        public TypeEnum Type { get; set; }
+        public int? Power { get; set; }
         public int MaxPP { get; set; }
         public int CurrentPP { get; set; }
-        public int Accuracy { get; set; }
+        public int? Accuracy { get; set; }
         public int Priority { get; set; }
         [BsonRepresentation(BsonType.String)]
         public DamageClassEnum DamageClass { get; set; }
@@ -31,15 +31,15 @@ namespace Core.Domain.DataObjects
         public int CritRate { get; set; } = 0;
         public int MinTurns { get; set; } = 0;
         public int MaxTurns { get; set;} = 0;
-        public int MinHits { get; set; } = 0;
-        public int MaxHits { get; set; } = 0;
+        public int? MinHits { get; set; }
+        public int? MaxHits { get; set; }
         [BsonRepresentation(BsonType.String)]
-        public MoveCategoryEnum Catagory { get; set; }
+        public MoveCategoryEnum Category { get; set; }
 
-        public Move(string name, List<TypeEnum> types, int power, int maxPP, int currentPP, int accuracy, int priority, DamageClassEnum damageClass, bool targetSelf, int statChance, string ailment, int ailmentChance, int drain, int healing, int flinchChance, int critRate, int minTurns, int maxTurns, int minHits, int maxHits, MoveCategoryEnum catagory)
+        public Move(string name, TypeEnum type, int power, int maxPP, int currentPP, int accuracy, int priority, DamageClassEnum damageClass, bool targetSelf, int statChance, string ailment, int ailmentChance, int drain, int healing, int flinchChance, int critRate, int minTurns, int maxTurns, int minHits, int maxHits, MoveCategoryEnum category)
         {
             Name = name;
-            Types = types;
+            Type = type;
             Power = power;
             MaxPP = maxPP;
             CurrentPP = currentPP;
@@ -58,7 +58,7 @@ namespace Core.Domain.DataObjects
             MaxTurns = maxTurns;
             MinHits = minHits;
             MaxHits = maxHits;
-            Catagory = catagory;
+            Category = category;
         }
 
         public Move()
