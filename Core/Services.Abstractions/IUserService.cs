@@ -9,5 +9,6 @@ namespace Core.Services.Abstractions
         Task<UserDto> AddNewUser(UserRequest user);
         Task<UserDto> AddWishToList(string pokemonName, string user, CancellationToken cancellationToken = default);
         Task<UserDto> RemoveWishFromList(string pokemonName, string user, CancellationToken cancellationToken = default);
+        Task<UserDto?> GetUserDataByEmail(string email);
     }
 }

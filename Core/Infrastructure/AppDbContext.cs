@@ -91,7 +91,13 @@ public class AppDbContext : DbContext
             entity.ToCollection("inventory");
             entity.HasKey(i => i.UserEmail);
             entity.Property(i => i.UserEmail).HasElementName("_id");
-            entity.OwnsMany(i => i.Items);
+
+            // Configure the owned collection with ItemId as its primary key
+            entity.OwnsMany(i => i.Items, slots =>
+            {
+                slots.WithOwner();            // Binds the owned relationship explicitly
+                slots.HasKey(s => s.ItemId);  // Stops EF Core from inventing InventoryTempId
+            });
         });
     }
 }
