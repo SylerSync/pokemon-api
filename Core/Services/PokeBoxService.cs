@@ -46,6 +46,7 @@ namespace Core.Services
                     BaseExp = pokemon.BaseExp,
                     CurrentExp = pokemon.CurrentExp,
                     Status = pokemon.Status,
+                    HeldItem = pokemon.HeldItem,
                 };
 
                 if (!await _repositoryManager.PokeBoxRepository.AddToUsersPokeBox(userID, newPokemon, cancellationToken))
@@ -89,6 +90,7 @@ namespace Core.Services
                     BaseExp = pokemon.BaseExp,
                     CurrentExp = pokemon.CurrentExp,
                     Status = pokemon.Status,
+                    HeldItem = pokemon.HeldItem,
                 };
 
                 if (!await _repositoryManager.PokeBoxRepository.RemoveFromUsersPokeBox(userID, newPokemon, cancellationToken))
@@ -143,7 +145,8 @@ namespace Core.Services
                     EvolutionReqs = pokemon.EvolutionReqs,
                     BaseExp = pokemon.BaseExp,
                     CurrentExp = pokemon.CurrentExp,
-                    Status = pokemon.Status
+                    Status = pokemon.Status,
+                    HeldItem = pokemon.HeldItem,
                 };
 
                 newPokemon = await _repositoryManager.PokeBoxRepository.UpdateCaughtPokemon(userID, newPokemon, cancellationToken);
@@ -171,7 +174,8 @@ namespace Core.Services
                     EvolutionReqs = newPokemon.EvolutionReqs,
                     BaseExp = newPokemon.BaseExp,
                     CurrentExp = newPokemon.CurrentExp,
-                    Status = newPokemon.Status
+                    Status = newPokemon.Status,
+                    HeldItem = newPokemon.HeldItem,
                 };
 
 
@@ -210,7 +214,8 @@ namespace Core.Services
                     EvolutionReqs = p.EvolutionReqs,
                     BaseExp = p.BaseExp,
                     CurrentExp = p.CurrentExp,
-                    Status = p.Status
+                    Status = p.Status,
+                    HeldItem = p.HeldItem,
 
                 }).ToList()
             };

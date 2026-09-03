@@ -82,6 +82,8 @@ namespace Core.Infrastructure.Repositories
                 dbPokemon.Level = pokemon.Level;
                 dbPokemon.Stats = pokemon.Stats;
                 dbPokemon.Moves = pokemon.Moves;
+                dbPokemon.Status = pokemon.Status;
+                dbPokemon.HeldItem = pokemon.HeldItem;
 
                 await _dbContext.SaveChangesAsync(cancellationToken);
 
