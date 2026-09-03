@@ -37,5 +37,6 @@ namespace Core.Contracts.PokeBox
         public List<EvolutionReqs> EvolutionReqs { get; set; }
         public int BaseExp { get; set; }
         public int CurrentExp { get; set; }
+        public string? Status { get; set; }
     }
 }
