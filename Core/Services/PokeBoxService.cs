@@ -44,7 +44,8 @@ namespace Core.Services
                     Level = pokemon.Level,
                     EvolutionReqs = pokemon.EvolutionReqs,
                     BaseExp = pokemon.BaseExp,
-                    CurrentExp = pokemon.CurrentExp
+                    CurrentExp = pokemon.CurrentExp,
+                    Status = pokemon.Status,
                 };
 
                 if (!await _repositoryManager.PokeBoxRepository.AddToUsersPokeBox(userID, newPokemon, cancellationToken))
@@ -59,6 +60,49 @@ namespace Core.Services
             }
         }
 
+        public async Task<PokeBoxDto> RemoveFromUsersPokeBox(string userID, PokemonFullInfoDto pokemon, CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                var newPokemon = new CaughtPokemon
+                {
+                    _id = pokemon._id,
+                    UserEmail = userID,
+                    ID = pokemon.ID,
+                    Name = pokemon.Name,
+                    Shiny = pokemon.Shiny,
+                    Types = pokemon.Types,
+                    Sprites = pokemon.Sprites,
+                    Height = pokemon.Height,
+                    Weight = pokemon.Weight,
+                    Cry = pokemon.Cry,
+                    CaptureRate = pokemon.CaptureRate,
+                    TotalHP = pokemon.TotalHP,
+                    CurrentHP = pokemon.CurrentHP,
+                    Stats = pokemon.Stats,
+                    Moves = pokemon.Moves,
+                    LearnableMoves = pokemon.LearnableMoves,
+                    TotalKOs = pokemon.TotalKOs,
+                    TotalFaints = pokemon.TotalFaints,
+                    Level = pokemon.Level,
+                    EvolutionReqs = pokemon.EvolutionReqs,
+                    BaseExp = pokemon.BaseExp,
+                    CurrentExp = pokemon.CurrentExp,
+                    Status = pokemon.Status,
+                };
+
+                if (!await _repositoryManager.PokeBoxRepository.RemoveFromUsersPokeBox(userID, newPokemon, cancellationToken))
+                {
+                    throw new Exception("Failed to remove Pokemon from user's PokeBox");
+                }
+                return MapToDto(await _repositoryManager.PokeBoxRepository.GetUsersPokeBox(userID, cancellationToken));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error removing Pokemon from user's PokeBox: {ex.Message}", ex);
+            }
+        }
+
         public async Task<PokeBoxDto> GetPokeBox(string userID, CancellationToken cancellationToken = default)
         {
             try
@@ -68,6 +112,73 @@ namespace Core.Services
             catch (Exception ex)
             {
                 throw new Exception("Error retrieving user's PokeBox: " + ex.Message, ex);
+            }
+        }
+
+        public async Task<PokemonFullInfoDto> UpdateCaughtPokemon(string userID, PokemonFullInfoDto pokemon, CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                var newPokemon = new CaughtPokemon
+                {
+                    _id = pokemon._id,
+                    UserEmail = userID,
+                    ID = pokemon.ID,
+                    Name = pokemon.Name,
+                    Shiny = pokemon.Shiny,
+                    Types = pokemon.Types,
+                    Sprites = pokemon.Sprites,
+                    Height = pokemon.Height,
+                    Weight = pokemon.Weight,
+                    Cry = pokemon.Cry,
+                    CaptureRate = pokemon.CaptureRate,
+                    TotalHP = pokemon.TotalHP,
+                    CurrentHP = pokemon.CurrentHP,
+                    Stats = pokemon.Stats,
+                    Moves = pokemon.Moves,
+                    LearnableMoves = pokemon.LearnableMoves,
+                    TotalKOs = pokemon.TotalKOs,
+                    TotalFaints = pokemon.TotalFaints,
+                    Level = pokemon.Level,
+                    EvolutionReqs = pokemon.EvolutionReqs,
+                    BaseExp = pokemon.BaseExp,
+                    CurrentExp = pokemon.CurrentExp,
+                    Status = pokemon.Status
+                };
+
+                newPokemon = await _repositoryManager.PokeBoxRepository.UpdateCaughtPokemon(userID, newPokemon, cancellationToken);
+
+                return new PokemonFullInfoDto
+                {
+                    _id = newPokemon._id,
+                    ID = newPokemon.ID,
+                    Name = newPokemon.Name,
+                    Shiny = newPokemon.Shiny,
+                    Types = newPokemon.Types,
+                    Sprites = newPokemon.Sprites,
+                    Height = newPokemon.Height,
+                    Weight = newPokemon.Weight,
+                    Cry = newPokemon.Cry,
+                    CaptureRate = newPokemon.CaptureRate,
+                    TotalHP = newPokemon.TotalHP,
+                    CurrentHP = newPokemon.CurrentHP,
+                    Stats = newPokemon.Stats,
+                    Moves = newPokemon.Moves,
+                    LearnableMoves = newPokemon.LearnableMoves,
+                    TotalKOs = newPokemon.TotalKOs,
+                    TotalFaints = newPokemon.TotalFaints,
+                    Level = newPokemon.Level,
+                    EvolutionReqs = newPokemon.EvolutionReqs,
+                    BaseExp = newPokemon.BaseExp,
+                    CurrentExp = newPokemon.CurrentExp,
+                    Status = newPokemon.Status
+                };
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error adding Pokemon to user's PokeBox: {ex.Message}", ex);
             }
         }
 
@@ -98,7 +209,8 @@ namespace Core.Services
                     Level = p.Level,
                     EvolutionReqs = p.EvolutionReqs,
                     BaseExp = p.BaseExp,
-                    CurrentExp = p.CurrentExp
+                    CurrentExp = p.CurrentExp,
+                    Status = p.Status
 
                 }).ToList()
             };

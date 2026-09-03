@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
+using SharpCompress.Compressors.ZStandard;
 
 namespace Core.Infrastructure.Repositories
 {
@@ -43,6 +44,53 @@ namespace Core.Infrastructure.Repositories
             if (pokemon == null) { return box; }
             box.pokemon = pokemon;
             return box;
+        }
+
+        public async Task<bool> RemoveFromUsersPokeBox(string userID, CaughtPokemon pokemon, CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                var dbPokemon = await _dbContext.CaughtPokemon
+                    .FirstOrDefaultAsync(p => p.UserEmail == userID && p._id == pokemon._id, cancellationToken);
+
+                if (dbPokemon == null) return false;
+
+                _dbContext.CaughtPokemon.Remove(dbPokemon);
+                await _dbContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public async Task<CaughtPokemon> UpdateCaughtPokemon(string userID, CaughtPokemon pokemon, CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                var dbPokemon = await _dbContext.CaughtPokemon
+                    .FirstOrDefaultAsync(p => p.UserEmail == userID && p._id == pokemon._id, cancellationToken);
+
+                if (dbPokemon == null) throw new InvalidOperationException("Pokemon not found");
+
+                dbPokemon.TotalHP = pokemon.TotalHP;
+                dbPokemon.CurrentHP = pokemon.CurrentHP;
+                dbPokemon.TotalFaints = pokemon.TotalFaints;
+                dbPokemon.TotalKOs = pokemon.TotalKOs;
+                dbPokemon.CurrentExp = pokemon.CurrentExp;
+                dbPokemon.Level = pokemon.Level;
+                dbPokemon.Stats = pokemon.Stats;
+                dbPokemon.Moves = pokemon.Moves;
+
+                await _dbContext.SaveChangesAsync(cancellationToken);
+
+                return dbPokemon;
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Error updating Pokemon: " + ex.Message, ex);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Core.Contracts.PokeBox;
+using Core.Contracts.Pokemon;
 using Core.Contracts.User;
 using Core.Services.Abstractions;
 using Microsoft.AspNetCore.Mvc;
@@ -31,6 +32,34 @@ namespace controllers.Controllers
             catch (Exception ex)
             {
                 return BadRequest("An error occured updating pokebox");
+            }
+        }
+
+        [HttpPost("removePokemonFromBox")]
+        public async Task<ActionResult<PokeBoxDto?>> RemoveFromPokeBox([FromBody] PokeBoxRequest request)
+        {
+            try
+            {
+                var updatedBox = await _serviceManager.PokeBoxService.RemoveFromUsersPokeBox(request.UserID, request.Pokemon);
+                return Ok(updatedBox);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("An error occured updating pokebox");
+            }
+        }
+
+        [HttpPost("updateCaughtPokemon")]
+        public async Task<ActionResult<PokemonFullInfoDto?>> UpdateCaughtPokemon([FromBody] PokeBoxRequest request)
+        {
+            try
+            {
+                var updatedPokemon = await _serviceManager.PokeBoxService.UpdateCaughtPokemon(request.UserID, request.Pokemon);
+                return Ok(updatedPokemon);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("An error occured updating caught pokemon");
             }
         }
 

@@ -10,6 +10,8 @@ namespace Core.Services.Abstractions
     public interface IPokeBoxService
     {
         Task<PokeBoxDto> AddToUsersPokeBox(string userID, PokemonFullInfoDto pokemon, CancellationToken cancellationToken = default);
+        Task<PokemonFullInfoDto> UpdateCaughtPokemon(string userID, PokemonFullInfoDto pokemon, CancellationToken cancellationToken = default);
+        Task<PokeBoxDto> RemoveFromUsersPokeBox(string userID, PokemonFullInfoDto pokemon, CancellationToken cancellationToken = default);
         Task<PokeBoxDto> GetPokeBox(string userID, CancellationToken cancellationToken = default);
     }
 }
