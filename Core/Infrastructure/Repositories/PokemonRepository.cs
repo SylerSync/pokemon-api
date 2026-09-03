@@ -46,9 +46,21 @@ namespace Core.Infrastructure.Repositories
             return pokemon;
         }
 
-        public Task<Pokemon> GetPokemonByIDAsync(int id, CancellationToken cancellationToken = default)
+        public async Task<Pokemon> GetPokemonByIDAsync(int id, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var pokemon = await _dbContext.Pokemon.FirstOrDefaultAsync(p => p.ID == id, cancellationToken);
+                if (pokemon == null)
+                {
+                    throw new Exception($"Pokemon with ID {id} not found.");
+                }
+                return pokemon;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while retrieving the Pokemon with ID {id}: {ex.Message}");
+            }
         }
     }
 }

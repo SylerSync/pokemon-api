@@ -32,9 +32,17 @@ namespace controllers.Controllers
 
         // GET api/<PokemonController>/5
         [HttpGet("{id}")]
-        public string GetPokemonByID(int id)
+        public Task<PokemonDto> GetPokemonByID(int id)
         {
-            return "value";
+            try
+            {
+                var pokemon = _serviceManager.PokemonService.GetPokemonByIDAsync(id);
+                return pokemon;
+            }
+            catch (Exception ex)
+            {
+                return Task.FromResult<PokemonDto>(null);
+            }
         }
 
         // POST api/<PokemonController>

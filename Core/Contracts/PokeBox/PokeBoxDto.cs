@@ -38,5 +38,6 @@ namespace Core.Contracts.PokeBox
         public int BaseExp { get; set; }
         public int CurrentExp { get; set; }
         public string? Status { get; set; }
+        public string? HeldItem { get; set; }
     }
 }

@@ -37,9 +37,31 @@ namespace Core.Services
             throw new NotImplementedException();
         }
 
-        public Task<PokemonDto> GetPokemonByIDAsync(int id, CancellationToken cancellationToken = default)
+        public async Task<PokemonDto> GetPokemonByIDAsync(int id, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var results = await _repositoryManager.PokemonRepository.GetPokemonByIDAsync(id, cancellationToken);
+
+                var dto = new PokemonDto
+                {
+                    ID = results.ID,
+                    Name = results.Name,
+                    FlavorText = results.FlavorText,
+                    Types = results.Types.Select(t => t.ToString()).ToList(),
+                    Sprites = results.Sprites,
+                    Height = results.Height,
+                    Weight = results.Weight,
+                    Cry = results.Cry,
+                    Stats = results.Stats.Select(s => new StatDto { Name = s.Name.ToString(), BaseStat = s.BaseStat }).ToList(),
+                    EvolutionReqs = results.EvolutionReqs
+                };
+                return dto;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while retrieving the Pokémon with ID {id}.", ex);
+            }
         }
 
         public async Task<List<PokemonDto>> GetPokemonAsync(CancellationToken cancellationToken = default)

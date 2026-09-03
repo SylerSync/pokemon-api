@@ -36,9 +36,10 @@ namespace Core.Domain.DataObjects
         public int CurrentExp { get; set; }
         public string[] MinorStatus { get; set; } = Array.Empty<string>();
         public string? Status { get; set; }
+        public string? HeldItem { get; set; }
 
         public CaughtPokemon() { } // Empty constructor for Entity Framework
-        public CaughtPokemon(string _idvalue, int id, string name, string flavorText, bool shiny, Sprites sprites, List<TypeEnum> types, int height, int weight, string cry, int captureRate, int totalHP, int currentHP, List<Stat> stats, List<Move> moves, List<string> learnableMoves, int totalKOs, int totalFaints, int level, List<EvolutionReqs> evolutionReqs, int baseExp, int currentExp, string[] minorStatus, bool wishList)
+        public CaughtPokemon(string _idvalue, int id, string name, string flavorText, bool shiny, Sprites sprites, List<TypeEnum> types, int height, int weight, string cry, int captureRate, int totalHP, int currentHP, List<Stat> stats, List<Move> moves, List<string> learnableMoves, int totalKOs, int totalFaints, int level, List<EvolutionReqs> evolutionReqs, int baseExp, int currentExp, string[] minorStatus, string? heldItem, string? status)
         {
             _id = _idvalue;
             ID = id;
@@ -62,6 +63,8 @@ namespace Core.Domain.DataObjects
             BaseExp = baseExp;
             CurrentExp = currentExp;
             MinorStatus = minorStatus;
+            Status = status;
+            HeldItem = heldItem;
         }
     }
 }
